@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+ .main_container {
+   padding-top: 2rem;
+ }
