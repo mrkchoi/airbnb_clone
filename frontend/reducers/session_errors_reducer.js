@@ -1,8 +1,7 @@
 import { merge } from 'lodash';
+import { RECEIVE_CURRENT_USER } from '../actions/session_actions';
 
-export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
-export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
-
+const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
 const defaultState = [];
 
 const sessionErrorsReducer = (oldState = defaultState, action) => {

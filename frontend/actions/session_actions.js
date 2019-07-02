@@ -6,6 +6,7 @@ export const RECEIVE_SESSION_ERRORS = 'RECEIVE_ERRORS';
 
 // Regular actions
 const receiveCurrentUser = user => {
+  console.log(user);
   return ({
     type: RECEIVE_CURRENT_USER,
     user: user
@@ -14,8 +15,7 @@ const receiveCurrentUser = user => {
 
 const logoutCurrentUser = () => {
   return ({
-    type: LOGOUT_CURRENT_USER,
-    id: null
+    type: LOGOUT_CURRENT_USER
   });
 };
 
@@ -39,6 +39,6 @@ export const logIn = user => dispatch => {
 
 export const logOut = () => dispatch => {
   return SessionApiUtil.logOut()
-    .then(res => dispatch(logoutCurrentUser()));
+    .then(() => dispatch(logoutCurrentUser()));
 };
 
