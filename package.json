@@ -26,9 +26,14 @@
     "lib": "lib",
     "test": "test"
   },
+  "engines": {
+    "node": "8.9.4",
+    "npm": "6.9.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --watch --mode=development"
+    "start": "webpack --watch --mode=development",
+    "postinstall": "webpack"
   },
   "repository": {
     "type": "git",

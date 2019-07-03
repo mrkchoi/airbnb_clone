@@ -32,7 +32,13 @@ class SessionForm extends React.Component {
   }
 
   loginDemoUser() {
-
+    // create mock user credentials
+    // create default empty state
+    // update state inside of helper function until 
+      // demo password.length == 0
+    // submit form using updated state
+    // closemodal + clear session errors
+    
   }
 
   render() {

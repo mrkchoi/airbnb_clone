@@ -14,8 +14,6 @@ class Greeting extends React.Component {
   }
 
   handleOpenModal(type) {
-    console.log("clicked");
-    // e.preventDefault();
     this.props.openModal(type);
   }
 

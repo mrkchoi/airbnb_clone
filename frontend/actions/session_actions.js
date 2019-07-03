@@ -7,7 +7,6 @@ export const CLEAR_SESSION_ERRORS = 'CLEAR_SESSION_ERRORS';
 
 // Regular actions
 const receiveCurrentUser = user => {
-  console.log(user);
   return ({
     type: RECEIVE_CURRENT_USER,
     user: user
@@ -32,19 +31,6 @@ export const clearErrors = () => {
     type: CLEAR_SESSION_ERRORS,
   });
 }
-
-// Thunk actions
-// export const signUp = user => dispatch => {
-//   return SessionApiUtil.signUp(user)
-//     .then(
-//       user => dispatch(receiveCurrentUser(user))
-//     )
-//     .fail(errors => {
-//       console.log(errors);
-//       console.log('errors!');
-//       return dispatch(receiveSessionErrors(errors))
-//     });
-// };
 
 export const signUp = user => dispatch => {
   return SessionApiUtil.signUp(user)
