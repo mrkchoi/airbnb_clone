@@ -18,6 +18,10 @@
    padding-top: 2rem;
  }
 
+ input[type="text"]:focus {
+  border-color: rgb(0, 132, 137) !important;
+ }
+
  .input__text {}
 
  /* Main teal: rgb(0, 132, 137) */

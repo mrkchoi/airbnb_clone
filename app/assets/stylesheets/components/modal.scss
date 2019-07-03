@@ -1,18 +1,101 @@
 // Modal Background + wrapper
-.modal__background {}
-.modal__child {}
+.modal__background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+
+.modal__child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 
 // Modal form
-.modal__form-container {}
-.modal__form {}
-.modal__input-text {}
+.modal__form-container {
+  background-color: #fff;
+  padding: 2rem;
+  width: 500px;
+  height: 500px;
+  position: relative;
+  // border-radius: 20px;
+}
+.modal__form {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.modal__input-text {
+  padding: 0.9rem !important;
+  font-size: 1.2rem !important;
+  margin-bottom: 1.2rem !important;
+}
 
 // Modal errors
 .modal__errors-container {}
 .modal__errors-single {}
 
 // Modal buttons
-.modal__btn {}
-.modal__btn-close {}
+.modal__btn#modal__btn-submit-id {
+  background-color: #FF5A5F !important;
+  padding: 1rem;
+  width: 100%;
+  color: #fff !important;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.modal__btn#modal__btn-submit-id:active {
+  background-color: rgb(223, 60, 71) !important;
+}
+
+
+
+
+.modal__btn-close {
+  display: inline-block;
+  -webkit-text-stroke: 2.7px white;
+  text-align: center;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  box-shadow: 0px 2px 7px rgba(0,0,0,0.2);
+}
+
+.modal__btn-close i {
+  display: block;
+  color: rgb(118, 118, 118);
+  font-size: 1.8rem;
+  position: relative;
+  top: 5.2px;
+}
 .modal__btn--submit {}
+
+
+// Other form section
+.modal__other-form-container {
+  padding-top: 1.5rem;
+  display: flex;
+  color: rgba(0,0,0,0.6);
+}
+
+.modal__account-msg {
+  margin-right: 0.8rem;
+  font-weight: 300;
+  font-size: 1.1rem;
+}
+
+.modal__btn-other-form {
+  color: rgb(0, 132, 137) !important;
+  font-size: 1.1rem;
+  font-weight: 400;
+}

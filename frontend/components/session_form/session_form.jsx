@@ -62,7 +62,7 @@ class SessionForm extends React.Component {
           href="#" 
           className="modal__btn-close"
           onClick={this.props.closeModal} >
-          x
+          <i class="fas fa-times"></i>
         </a>
         <br/>
         {errors}
@@ -87,10 +87,15 @@ class SessionForm extends React.Component {
           <input 
             type="submit" 
             value={this.props.formType} 
+            id="modal__btn-submit-id"
             className="ui button basic modal__btn--submit modal__btn" />
         </form>
-        {existingAccountMessage}
-        {this.props.otherForm}
+        <div className="modal__other-form-container">
+          <p className="modal__account-msg">
+            {existingAccountMessage}
+          </p>
+          {this.props.otherForm}
+        </div>
       </div>
     );
   }

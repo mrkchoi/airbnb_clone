@@ -15,10 +15,12 @@ const mdp = dispatch => {
   return ({
     processForm: user => dispatch(logIn(user)),
     otherForm: (
-      <button 
+      <a
+        href="#"
+        className="modal__btn-other-form"
         onClick={() => dispatch(openModal('signup'))}>
         Sign up
-      </button>
+      </a>
     ),
     closeModal: () => dispatch(closeModal())
   });
