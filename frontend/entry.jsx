@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
   window.signUp = signUp;
   window.logIn = logIn;
   window.logOut = logOut;
-
   // TESTING END
 
   ReactDOM.render(
