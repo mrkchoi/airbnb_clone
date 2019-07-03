@@ -18,11 +18,15 @@
 
 
 // Modal form
+.modal__header {
+  margin-bottom: 0 !important;
+}
+
 .modal__form-container {
   background-color: #fff;
   padding: 2rem;
   width: 500px;
-  height: 500px;
+  height: 400px;
   position: relative;
   // border-radius: 20px;
 }

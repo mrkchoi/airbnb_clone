@@ -10,7 +10,10 @@
 
 // Logged in
 .header__navbar-container--logged-in {}
-.header__navbar-welcome-msg {}
+.header__navbar-welcome-msg {
+  margin-bottom: 0;
+  color: #fff;
+}
 
 // Navbar links
 .header__navbar-link {

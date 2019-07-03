@@ -57,7 +57,7 @@ class SessionForm extends React.Component {
 
     return (
       <div className="modal__form-container">
-        <h2 >{this.props.formType}</h2>
+        <h2 className="modal__header">{this.props.formType}</h2>
         <a 
           href="#" 
           className="modal__btn-close"

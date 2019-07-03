@@ -10,6 +10,13 @@ const App = () => {
     <main className="main__container">
       <div className="header__container-outer">
         <Header />
+        <div className="header__desc-container">
+          <p className="header__desc-content">
+            Introducing Airbnb Luxe<br />
+            Extraordinary homes<br />
+            with five–star everything
+          </p>
+        </div>
       </div>
     </main>
   );

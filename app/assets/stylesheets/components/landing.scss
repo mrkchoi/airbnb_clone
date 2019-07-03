@@ -3,4 +3,18 @@
   height: 100vh;
   width: 100vw;
   background-size: cover;
+  position: relative;
+}
+
+.header__desc-container {
+  position: absolute;
+  bottom: 1.8rem;
+  right: 2.2rem;
+}
+
+.header__desc-content {
+  color: #fff;
+  text-align: right;
+  line-height: 21px !important;
+  font-size: 1rem;
 }
