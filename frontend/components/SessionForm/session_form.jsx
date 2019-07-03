@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -25,6 +26,8 @@ class SessionForm extends React.Component {
   }
 
   render() {
+
+    // Errors
     let errors;
     if (this.props.errors) {
       errors = (
@@ -33,6 +36,25 @@ class SessionForm extends React.Component {
         </div>
       );
     }
+
+    // Sign up/Log in message
+    let existingAccountMessage;
+    if (this.props.formType === 'Log in') {
+      existingAccountMessage = (
+        <div>
+          <p>Don't have an account?</p>
+          <Link to="/signup">Sign up</Link>
+        </div>
+      );
+    } else {
+      existingAccountMessage = (
+        <div>
+          <p>Already have an Airbnb account?</p>
+          <Link to="/login">Log in</Link>
+        </div>
+      );
+    }
+    
 
     return (
       <div>
@@ -60,6 +82,7 @@ class SessionForm extends React.Component {
             value={this.props.formType} 
             className="ui button basic" />
         </form>
+        {existingAccountMessage}
       </div>
     );
   }

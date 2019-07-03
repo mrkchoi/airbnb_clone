@@ -13,7 +13,7 @@ class Greeting extends React.Component {
       return (
         <div>
           Welcome, {currentUser.username}!
-        <button onClick={() => logOut()}>Logout</button>
+        <button onClick={() => logOut()} className="ui button basic">Logout</button>
         </div>
       );
     } else {
