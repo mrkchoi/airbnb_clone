@@ -12,6 +12,10 @@ class SessionForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentDidMount() {
+    this.props.clearErrors();
+  }
+  
   handleSubmit(e) {
     e.preventDefault();
     this.props.processForm(this.state)
@@ -27,8 +31,8 @@ class SessionForm extends React.Component {
     }
   }
 
-  componentDidMount() {
-    this.props.clearErrors();
+  loginDemoUser() {
+
   }
 
   render() {
@@ -69,12 +73,25 @@ class SessionForm extends React.Component {
           onClick={this.props.closeModal} >
           <i className="fas fa-times"></i>
         </a>
+
+
+        <a 
+          href="#" 
+          onClick={this.loginDemoUser} 
+          id="modal__btn-submit-id"
+          className="modal__btn--submit modal__btn--submit-demo modal__btn">Log in with demo account</a>
+        <div className="modal__divider-container">
+          <p className="modal__divider-content">or</p>
+        </div>
+
         <br/>
         {errors}
         <br/>
         <form 
           onSubmit={this.handleSubmit} 
           className="ui form modal__form">
+
+
           <input 
             type="text" 
             value={this.state.username} 

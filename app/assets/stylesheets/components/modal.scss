@@ -16,6 +16,27 @@
   transform: translate(-50%, -50%);
 }
 
+// Modal divider
+
+.modal__divider-container {
+  width: 100%;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+  position: relative;
+  height: 0;
+}
+
+.modal__divider-content {
+  text-align: center;
+  background-color: #fff;
+  position: relative;
+  top: -0.1rem;
+  display: inline-block;
+  left: 50%;
+  padding: 0.8rem 1rem;
+  transform: translate(-50%, -50%);
+  color: rgb(118, 118, 118) !important;
+}
 
 // Modal form
 .modal__header {
@@ -26,9 +47,7 @@
   background-color: #fff;
   padding: 2rem;
   width: 500px;
-  height: 440px;
   position: relative;
-  // border-radius: 20px;
 }
 .modal__form {
   padding-bottom: 2rem;
@@ -70,7 +89,19 @@
   background-color: rgb(223, 60, 71) !important;
 }
 
+a#modal__btn-submit-id.modal__btn--submit-demo {
+  margin-top: 2rem !important;
+  display: inline-block;
+  text-align: center;
+  background-color: #fff !important;
+  color: #000 !important;
+  border: 2px solid rgb(118, 118, 118);
+  border-radius: 5px;
+}
 
+a#modal__btn-submit-id.modal__btn--submit-demo:active {
+  background-color:  rgb(226, 226, 226) !important;
+}
 
 
 .modal__btn-close {
