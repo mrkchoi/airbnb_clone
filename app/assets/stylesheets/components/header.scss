@@ -1,0 +1,17 @@
+.header__container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+.header__logo-container {}
+
+.header__logo-img {
+  background-image: url("../../assets/images/logo/01_airbnb-logo-sm-white.png");
+  height: 35px;
+  width: 35px;
+  background-size: contain;
+  display: block;
+}

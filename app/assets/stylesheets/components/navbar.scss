@@ -1,0 +1,32 @@
+// Navbar
+.header__navbar-container {
+  display: flex;
+  align-items: center;
+  // padding: 1rem;
+}
+
+// Logged out
+.header__navbar-container--logged-out {}
+
+// Logged in
+.header__navbar-container--logged-in {}
+.header__navbar-welcome-msg {}
+
+// Navbar links
+.header__navbar-link {
+  color: #fff;
+  padding: 1rem .4rem;
+  margin: 0 1rem;
+  border-bottom: 2px solid transparent;
+  transition: 75ms all ease-in;
+}
+
+.header__navbar-link:hover {
+  color: white;
+  text-decoration: none;
+  border-bottom: 2px solid #fff;
+}
+
+.header__navbar-link--logout {}
+.header__navbar-link--signup {}
+.header__navbar-link--login {}

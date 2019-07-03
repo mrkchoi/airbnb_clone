@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'normalize.css';
 
-import Root from './components/Root';
+import Root from './components/root';
 
 import { signUp, logIn, logOut } from './actions/session_actions';
 import configureStore from './store/store';

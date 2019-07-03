@@ -4,26 +4,53 @@ import { Link } from 'react-router-dom';
 class Greeting extends React.Component {
   constructor(props) {
     super(props);
+    this.handleLogout = this.handleLogout.bind(this);
+    this.handleOpenModal = this.handleOpenModal.bind(this);
+  }
+
+  handleLogout(e) {
+    e.preventDefault();
+    this.props.logOut();
+  }
+
+  handleOpenModal(type) {
+    console.log("clicked");
+    // e.preventDefault();
+    this.props.openModal(type);
   }
 
   render() {
-    let { currentUser, logOut } = this.props;
+    let { currentUser } = this.props;
 
     if (currentUser) {
       return (
-        <div>
-          Welcome, {currentUser.username}!
-        <button onClick={() => logOut()} className="ui button basic">Logout</button>
+        <div className="header__navbar-container header__navbar-container--logged-in">
+          <p className="header__navbar-welcome-msg">
+            Welcome back, {currentUser.username}!
+          </p>
+          <a
+            className="header__navbar-link header__navbar-link--logout" 
+            href="#"
+            onClick={this.handleLogout}>
+              Logout
+          </a>
         </div>
       );
     } else {
       return (
-        <div>
-          <Link to="/signup">Sign up</Link>
-          <br />
-          <Link to="/login">Log in</Link>
-          <br/>
-          {/* <button onClick={() => logOut()}>Logout</button> */}
+        <div className="header__navbar-container header__navbar-container--logged-out">
+          <a 
+            className="header__navbar-link header__navbar-link--signup" 
+            href="#" 
+            onClick={() => this.handleOpenModal('signup')}>
+              Sign up
+          </a>
+          <a 
+            className="header__navbar-link header__navbar-link--login" 
+            href="#" 
+            onClick={() => this.handleOpenModal('login')}>
+              Log in
+          </a>
         </div>
       );
     }
