@@ -16,6 +16,7 @@ class SessionForm extends React.Component {
     e.preventDefault();
     this.props.processForm(this.state)
       .then(this.props.closeModal);
+      // .catch();
   }
 
   handleInput(type) {
@@ -24,6 +25,10 @@ class SessionForm extends React.Component {
         [type]: e.target.value
       });
     }
+  }
+
+  componentDidMount() {
+    this.props.clearErrors();
   }
 
   render() {
@@ -62,7 +67,7 @@ class SessionForm extends React.Component {
           href="#" 
           className="modal__btn-close"
           onClick={this.props.closeModal} >
-          <i class="fas fa-times"></i>
+          <i className="fas fa-times"></i>
         </a>
         <br/>
         {errors}
@@ -75,14 +80,14 @@ class SessionForm extends React.Component {
             value={this.state.username} 
             placeholder="Username"
             onChange={this.handleInput('username')} 
-            className="modal__input-text input__text"/>
+            className="modal__input-text input__text modal__input-text--username"/>
           <br/>
           <input 
             type="text" 
             value={this.state.password}
             placeholder="Password"
             onChange={this.handleInput('password')} 
-            className="modal__input-text input__text"/>
+            className="modal__input-text input__text modal__input-text--password"/>
           <br /><br />
           <input 
             type="submit" 

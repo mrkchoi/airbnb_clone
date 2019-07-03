@@ -1,7 +1,11 @@
 import { merge } from 'lodash';
-import { RECEIVE_CURRENT_USER } from '../actions/session_actions';
+import { 
+  RECEIVE_CURRENT_USER,
+  RECEIVE_SESSION_ERRORS,
+  CLEAR_SESSION_ERRORS 
+} from '../actions/session_actions';
+import { CLOSE_MODAL } from '../actions/modal_actions';
 
-const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
 const defaultState = [];
 
 const sessionErrorsReducer = (oldState = defaultState, action) => {
@@ -11,7 +15,11 @@ const sessionErrorsReducer = (oldState = defaultState, action) => {
   switch(action.type) {
     case RECEIVE_SESSION_ERRORS:
       return action.errors;
+    case CLEAR_SESSION_ERRORS:
+      return defaultState;
     case RECEIVE_CURRENT_USER:
+      return defaultState;
+    case CLOSE_MODAL:
       return defaultState;
     default:
       return oldState;

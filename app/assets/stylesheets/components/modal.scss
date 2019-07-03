@@ -26,7 +26,7 @@
   background-color: #fff;
   padding: 2rem;
   width: 500px;
-  height: 400px;
+  height: 440px;
   position: relative;
   // border-radius: 20px;
 }
@@ -39,11 +39,22 @@
   padding: 0.9rem !important;
   font-size: 1.2rem !important;
   margin-bottom: 1.2rem !important;
+  font-weight: 300;
 }
+
+// .modal__input-text--username::after {
+//   background-image: url("assets/icons/form/01-input-envelope.png");
+// }
+
+// .modal__input-text--password::after {
+//   background-image: url("assets/icons/form/01-input-padlock.png");
+// }
 
 // Modal errors
 .modal__errors-container {}
-.modal__errors-single {}
+.modal__errors-single {
+  margin-bottom: 0;
+}
 
 // Modal buttons
 .modal__btn#modal__btn-submit-id {
