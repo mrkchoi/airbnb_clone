@@ -13,8 +13,7 @@ class SessionForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.processForm(this.state)
-      .then(this.props.history.push('/'));
+    this.props.processForm(this.state);
   }
 
   handleInput(type) {
@@ -30,7 +29,7 @@ class SessionForm extends React.Component {
     if (this.props.errors) {
       errors = (
         <div>
-          {this.props.errors.map(error => <p>{error}</p>)}
+          {this.props.errors.map((error, idx) => <p key={idx}>{error}</p>)}
         </div>
       );
     }
@@ -40,6 +39,7 @@ class SessionForm extends React.Component {
         <h2>{this.props.formType}</h2>
         <br/>
         {errors}
+        <br/>
         <form onSubmit={this.handleSubmit} className="ui form">
           <label>Username:
             <input 
