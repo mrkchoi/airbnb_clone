@@ -41,11 +41,11 @@ class SessionForm extends React.Component {
       password: ''
     });
 
-    // create mock user credentials
-    let guestCreds = {
-      username: 'guest',
-      password: 'password'
-    }
+    // // create mock user credentials
+    // let guestCreds = {
+    //   username: 'guestuser',
+    //   password: 'password'
+    // }
 
     let pw = 'password';
 
@@ -56,7 +56,7 @@ class SessionForm extends React.Component {
      setTimeout(() => {
         if (pw.length > 0) {
           this.setState({
-            username: 'guest',
+            username: 'guestuser',
             password: this.state.password.concat(pw[0])
           });
           pw = pw.slice(1);

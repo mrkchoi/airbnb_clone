@@ -9,6 +9,7 @@
 require 'open-uri'
 
 ActiveRecord::Base.transaction do
+  User.destroy_all
   ###################################
   # Users
   ###################################
@@ -200,5 +201,35 @@ ActiveRecord::Base.transaction do
   ###################################
   # Listings
   ###################################
+
+  num_hosts = Users.all.length
+
+  # Listing.create(
+  #   title: "",
+  #   description: "",
+  #   num_guests: ,
+  #   type: "",
+  #   num_rooms: ,
+  #   num_beds: ,
+  #   num_baths: ,
+  #   price: "",
+  #   self_check_in: "",
+  #   parking: "",
+  #   kitchen: "",
+  #   washer: "",
+  #   dryer: "",
+  #   dishwasher: "",
+  #   wifi: "",
+  #   tv: "",
+  #   bathroom_essentials: "",
+  #   bedroom_comforts: "",
+  #   coffee_maker: "",
+  #   hair_dryer: "",
+  #   location: "",
+  #   location_description: "",
+  #   lat: "",
+  #   long: "",
+  #   host_id: "",
+  # )
 
 end

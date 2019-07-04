@@ -29,6 +29,7 @@
 #  host_id              :integer
 #  created_at           :datetime         not null
 #  updated_at           :datetime         not null
+#  num_rooms            :integer
 #
 
 class Listing < ApplicationRecord
@@ -36,3 +37,30 @@ class Listing < ApplicationRecord
 
   has_many_attached :photos
 end
+
+
+
+# title
+# description
+# num_guests
+# type
+# num_beds
+# num_baths
+# price
+# self_check_in
+# parking
+# kitchen
+# washer
+# dryer
+# dishwasher
+# wifi
+# tv
+# bathroom_essentials
+# bedroom_comforts
+# coffee_maker
+# hair_dryer
+# location
+# location_description
+# lat
+# long
+# host_id

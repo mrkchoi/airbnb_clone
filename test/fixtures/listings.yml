@@ -29,6 +29,7 @@
 #  host_id              :integer
 #  created_at           :datetime         not null
 #  updated_at           :datetime         not null
+#  num_rooms            :integer
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

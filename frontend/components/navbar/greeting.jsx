@@ -24,7 +24,7 @@ class Greeting extends React.Component {
       return (
         <div className="header__navbar-container header__navbar-container--logged-in">
           <p className="header__navbar-welcome-msg">
-            Welcome back, {currentUser.username}!
+            Welcome back, {currentUser.firstname}!
           </p>
           <a
             className="header__navbar-link header__navbar-link--logout" 
