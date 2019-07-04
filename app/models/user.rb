@@ -3,6 +3,7 @@
 # Table name: users
 #
 #  id              :bigint           not null, primary key
+#  firstname       :string
 #  username        :string
 #  email           :string
 #  bio             :text
@@ -17,6 +18,7 @@ class User < ApplicationRecord
   validates :username, :session_token, uniqueness: true
   validates :username, presence: true
   validates :password, length: {minimum: 6, allow_nil: true}
+  has_one_attached :photo
 
   attr_reader :password
   before_validation :ensure_session_token

@@ -1,6 +1,6 @@
 class Api::UsersController < ApplicationController
   def index
-    @users = User.all
+    @users = User.with_attached_photo.all
     render :index
   end
   
@@ -18,6 +18,6 @@ class Api::UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:username, :password)
+    params.require(:user).permit(:firstname, :username, :password, :bio, :joined_date, :photo)
   end
 end
