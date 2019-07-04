@@ -1,7 +1,7 @@
 import React from 'react';
 import SessionForm from './session_form';
 import { connect } from 'react-redux';
-import { signUp, clearErrors } from '../../actions/session_actions';
+import { signUp, logIn, clearErrors } from '../../actions/session_actions';
 import { openModal, closeModal } from '../../actions/modal_actions';
 
 const msp = (state, ownProps) => {
@@ -14,6 +14,7 @@ const msp = (state, ownProps) => {
 const mdp = dispatch => {
   return ({
     processForm: user => dispatch(signUp(user)),
+    processDemoForm: user => dispatch(logIn(user)),
     otherForm: (
       <a 
         href="#"

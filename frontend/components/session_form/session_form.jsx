@@ -10,6 +10,7 @@ class SessionForm extends React.Component {
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.loginDemoUser = this.loginDemoUser.bind(this);
   }
 
   componentDidMount() {
@@ -31,14 +32,48 @@ class SessionForm extends React.Component {
     }
   }
 
-  loginDemoUser() {
-    // create mock user credentials
+  loginDemoUser(e) {
+    e.preventDefault();
+
     // create default empty state
+    this.setState({
+      username: '',
+      password: ''
+    });
+
+    // create mock user credentials
+    let guestCreds = {
+      username: 'guest',
+      password: 'password'
+    }
+
+    let pw = 'password';
+
     // update state inside of helper function until 
       // demo password.length == 0
-    // submit form using updated state
+
+    const loginCallback = () => {
+     setTimeout(() => {
+        if (pw.length > 0) {
+          this.setState({
+            username: 'guest',
+            password: this.state.password.concat(pw[0])
+          });
+          pw = pw.slice(1);
+          loginCallback();
+        } else {
+          // submit form using updated state
+          setTimeout(() => {
+            this.props.processDemoForm(this.state)
+              .then(this.props.closeModal);
+          }, 500);
+        }
+
+      }, 125);
+    }
     // closemodal + clear session errors
-    
+    this.props.clearErrors();
+    loginCallback();
   }
 
   render() {
@@ -106,7 +141,7 @@ class SessionForm extends React.Component {
             className="modal__input-text input__text modal__input-text--username"/>
           <br/>
           <input 
-            type="text" 
+            type="password" 
             value={this.state.password}
             placeholder="Password"
             onChange={this.handleInput('password')} 

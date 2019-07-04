@@ -14,6 +14,7 @@ const msp = (state, ownProps) => {
 const mdp = dispatch => {
   return ({
     processForm: user => dispatch(logIn(user)),
+    processDemoForm: user => dispatch(logIn(user)),
     otherForm: (
       <a
         href="#"
