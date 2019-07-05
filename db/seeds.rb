@@ -195,41 +195,397 @@ ActiveRecord::Base.transaction do
     end
   end
   
-  # https://aerbnb-seeds.s3-us-west-1.amazonaws.com/photos/users/01-user.png
-  
+
+
+
+
+
+
+
   
   ###################################
   # Listings
   ###################################
 
-  num_hosts = Users.all.length
+  Listing.destroy_all
 
+  num_hosts = User.all.length
+
+  # Listing template
   # Listing.create(
-  #   title: "",
-  #   description: "",
+  #   title: "title",
+  #   description: "description",
   #   num_guests: ,
-  #   type: "",
+  #   type: "type",
   #   num_rooms: ,
   #   num_beds: ,
   #   num_baths: ,
-  #   price: "",
-  #   self_check_in: "",
-  #   parking: "",
-  #   kitchen: "",
-  #   washer: "",
-  #   dryer: "",
-  #   dishwasher: "",
-  #   wifi: "",
-  #   tv: "",
-  #   bathroom_essentials: "",
-  #   bedroom_comforts: "",
-  #   coffee_maker: "",
-  #   hair_dryer: "",
-  #   location: "",
-  #   location_description: "",
-  #   lat: "",
-  #   long: "",
-  #   host_id: "",
+  #   price: ,
+  #   self_check_in: "true",
+  #   parking: "true",
+  #   kitchen: "true",
+  #   washer: "true",
+  #   dryer: "true",
+  #   dishwasher: "true",
+  #   wifi: "true",
+  #   tv: "true",
+  #   bathroom_essentials: "true",
+  #   bedroom_comforts: "true",
+  #   coffee_maker: "true",
+  #   hair_dryer: "true",
+  #   location: "location",
+  #   location_description: "description",
+  #   lat: 34,
+  #   long: -122,
+  #   host_id: id,
   # )
+
+  # Listing 1 
+  Listing.create(
+    title: "Downtown SF Studio Apartment Near Civic Center",
+    description: "Explore the heart of San Francisco from this designer studio. Unwind in this boutique, open-concept space with carefully selected decor or gaze out across the city from the rooftop terrace with 360-degree views, a BBQ, and a seating area.",
+    num_guests: 3,
+    num_rooms: 1,
+    num_beds: 1,
+    num_baths: 1,
+    listing_type: "studio",
+    price: 150,
+    self_check_in: true,
+    parking: true,
+    kitchen: true,
+    washer: true,
+    dryer: true,
+    dishwasher: true,
+    wifi: true,
+    tv: true,
+    bathroom_essentials: true,
+    bedroom_comforts: true,
+    coffee_maker: true,
+    hair_dryer: true,
+    location: "San Francisco, California, United States",
+    location_description: "The building is located in the Civic Center area, in the middle of town, and is equal distance to all of the nightlife options and places of interest. Discover the city with close access to the water and the iconic Mission District.",
+    lat: 37.7856652,
+    long: -122.4070889,
+    host_id: User.all[(0...num_hosts).to_a.sample].id
+  )
+
+  # # Listing 2
+  Listing.create(
+    title: "Explore Valencia Street from a Room in a Serene Condo",
+    description: "Relax in a beautiful, bright room in chic and calm condo in the vibrant Mission District, and explore local restaurant scene. Room has its own TV with Netflix and Hulu, and has an adjacent private bathroom just for guests. While the neighborhood is busy, the guest bedroom is not street facing and is quiet. Walk to Dolores Park, Castro, and Hayes Valley. Easy Uber or Bart ride from the airport! Please read useful info in the House Rules section below (scroll all the way down), including check-in information and parking details. A very sweet and quiet boston terrier (@petitepokey) lives here.",
+    num_guests: 2,
+    num_rooms: 1,
+    num_beds: 1,
+    num_baths: 1,
+    listing_type: "private bedroom",
+    price: 140,
+    self_check_in: true,
+    parking: true,
+    kitchen: true,
+    washer: true,
+    dryer: true,
+    dishwasher: true,
+    wifi: true,
+    tv: true,
+    bathroom_essentials: true,
+    bedroom_comforts: true,
+    coffee_maker: true,
+    hair_dryer: true,
+    location: "San Francisco, California, United States",
+    location_description: "Condo is steps away from some of the most popular restaurants, shops, a supermarket, & public transportation (including BART). That said, SF is a small city best explored on foot! *Please* *read* parking/check-in info in the House Rules. Dog at home.",
+    lat: 37.76016,
+    long: -122.41929,
+    host_id: User.all[(0...num_hosts).to_a.sample].id
+  )
+
+  # # Listing 3
+  Listing.create(
+    title: "Amazing Location with Breathtaking Bay Views",
+    description: "Enjoy 180° Bay views in the sunny living room at this hidden oasis in the heart of the city. Listen for foghorns, sea lions, and the clang of nearby cable cars. Sit at the sleek marble dining table and admire the eclectic art featured throughout.",
+    num_guests: 4,
+    num_rooms: 2,
+    num_beds: 2,
+    num_baths: 2,
+    listing_type: "whole apartment",
+    price: 185,
+    self_check_in: true,
+    parking: true,
+    kitchen: true,
+    washer: true,
+    dryer: true,
+    dishwasher: true,
+    wifi: true,
+    tv: true,
+    bathroom_essentials: true,
+    bedroom_comforts: true,
+    coffee_maker: true,
+    hair_dryer: true,
+    location: "San Francisco, California, United States",
+    location_description: "Nestled in North Beach, this is the place to be. Voted one of the country's Top 10 neighborhoods, it's walkable to downtown, the Wharf, Union Square, Lombard, Chinatown, and more. You're close to lovely cafes, great bars and fantastic restaurants.",
+    lat: 37.7982,
+    long: -122.41183,
+    host_id: User.all[(0...num_hosts).to_a.sample].id
+  )
+
+  # # Listing 4
+  Listing.create(
+    title: "Contemporary Apartment in Potrero Hill",
+    description: "Enjoy stunning views of the city at this renovated hilltop hideaway in one of San Francisco's sunniest neighborhoods. Marvel at the view while washing dishes in the fully equipped kitchen or while kicking back with coffee on the sunny balcony.",
+    num_guests: 3,
+    num_rooms: 1,
+    num_beds: 1,
+    num_baths: 3,
+    listing_type: "whole apartment",
+    price: 225,
+    self_check_in: true,
+    parking: true,
+    kitchen: true,
+    washer: true,
+    dryer: true,
+    dishwasher: true,
+    wifi: true,
+    tv: true,
+    bathroom_essentials: true,
+    bedroom_comforts: true,
+    coffee_maker: true,
+    hair_dryer: true,
+    location: "San Francisco, California, United States",
+    location_description: "Experience authentic San Francisco in Potrero Hill. Enjoy both old and new by taking a walk down cobblestone paths that date before the 1906 quake, leading to some of the city's most vibrant restaurants and shops.",
+    lat: 37.75308,
+    long: -122.40149,
+    host_id: User.all[(0...num_hosts).to_a.sample].id
+  )
+
+  # # Listing 5
+  Listing.create(
+    title: "Stretch out in This Modern San Francisco Loft",
+    description: "Relax in this authentic and thoughtfully decorated loft. The vibrant, open living room boasts 16-foot ceilings and sprawling windows letting in natural light. Admire original artwork, high end furniture and luxuries like a smart TV, and full kitchen.",
+    num_guests: 4,
+    num_rooms: 2,
+    num_beds: 2,
+    num_baths: 2,
+    listing_type: "whole apartment",
+    price: 205,
+    self_check_in: true,
+    parking: true,
+    kitchen: true,
+    washer: true,
+    dryer: true,
+    dishwasher: true,
+    wifi: true,
+    tv: true,
+    bathroom_essentials: true,
+    bedroom_comforts: true,
+    coffee_maker: true,
+    hair_dryer: true,
+    location: "San Francisco, California, United States",
+    location_description: "The loft is located within walking distance to downtown and the Moscone center—SOMA has a walk score of 97! There are plenty of great bars and award winning restaurants within walking distance, as well as transport to all parts of the city.",
+    lat: 37.77687,
+    long: -122.40916,
+    host_id: User.all[(0...num_hosts).to_a.sample].id
+  )
+
+  # # Listing 6
+  Listing.create(
+    title: "Fourth of July Penthouse with Views near Fisherman's Wharf",
+    description: "Enjoy close-up views of iconic landmarks from all living areas or have a family BBQ on the deck and admire the Golden Gate Bridge from there. On a chilly evening, gather everyone indoors for a warm meal and a movie.",
+    num_guests: 6,
+    num_rooms: 2,
+    num_beds: 3,
+    num_baths: 3,
+    listing_type: "whole house",
+    price: 799,
+    self_check_in: true,
+    parking: true,
+    kitchen: true,
+    washer: true,
+    dryer: true,
+    dishwasher: true,
+    wifi: true,
+    tv: true,
+    bathroom_essentials: true,
+    bedroom_comforts: true,
+    coffee_maker: true,
+    hair_dryer: true,
+    location: "San Francisco, California, United States",
+    location_description: "The house is located in North Beach/Telegraph Hill. It is perfectly centered between Pier 39, Fisherman's Wharf and North Beach (the Italian District). It's walking distance to Chinatown, Union Square, and the Financial District. Coit Tower is a few block away. Giants games, Boutique shopping, and world-class museums are just a short Uber ride away. And, if you just want to spend a day at home, relaxing, you'll find the top floor to be peaceful and calm high above the hustle and bustle of SF.",
+    lat: 37.80264,
+    long: -122.41046,
+    host_id: User.all[(0...num_hosts).to_a.sample].id
+  )
+
+  # # Listing 7
+  Listing.create(
+    title: "Indulge in a Designer Victorian in Pacific Heights",
+    description: "Unwind in contemporary luxury in this spectacular 1900s Victorian home. The space offers the utmost privacy and instills a sense of peace and belonging with the large backyard, bright and modern kitchen, patio walkout, and designer furnishings.",
+    num_guests: 6,
+    num_rooms: 3,
+    num_beds: 4,
+    num_baths: 3,
+    listing_type: "whole house",
+    price: 800,
+    self_check_in: true,
+    parking: true,
+    kitchen: true,
+    washer: true,
+    dryer: true,
+    dishwasher: true,
+    wifi: true,
+    tv: true,
+    bathroom_essentials: true,
+    bedroom_comforts: true,
+    coffee_maker: true,
+    hair_dryer: true,
+    location: "San Francisco, California, United States",
+    location_description: "Regal mansions and prestigious buildings are the essence of Pacific Heights. This prim and proper neighborhood epitomizes old-world elegance. The quiet streets are mostly enlivened with passers-by appreciating its jaw-dropping architectural grandeur.",
+    lat: 37.789,
+    long: -122.43939,
+    host_id: User.all[(0...num_hosts).to_a.sample].id
+  )
+
+  # # Listing 8
+  Listing.create(
+    title: "Stunning Family-Friendly House with Views in Noe Valley",
+    description: "Wake up in a bright bedroom and admire a postcard view of hillside houses from the window. This colorful, art-filled home is made for entertaining. Cook in a chef's kitchen, serve dinner at a formal table, and gather on orange cushions by a fire pit.",
+    num_guests: 8,
+    num_rooms: 3,
+    num_beds: 4,
+    num_baths: 3,
+    listing_type: "whole house",
+    price: 945,
+    self_check_in: true,
+    parking: true,
+    kitchen: true,
+    washer: true,
+    dryer: true,
+    dishwasher: true,
+    wifi: true,
+    tv: true,
+    bathroom_essentials: true,
+    bedroom_comforts: true,
+    coffee_maker: true,
+    hair_dryer: true,
+    location: "San Francisco, California, United States",
+    location_description: "Noe Valley is quaint and perfectly situated. Everything needed can be found within five blocks—from Whole Foods and upscale dining to neighborhood boutiques, cafes, and three MUNI lines. The 280 and 101 freeways are easily accessible.",
+    lat: 37.75016,
+    long: -122.43815,
+    host_id: User.all[(0...num_hosts).to_a.sample].id
+  )
+
+  # # Listing 9
+  Listing.create(
+    title: "Revitalized Edwardian Residence with Rooftop Patio",
+    description: "Find relics from the past in this update historical home. The space boasts original design features, wood finishes, a tasteful blend of different furnishings and decor, and a private backyard with an outdoor dining area.",
+    num_guests: 6,
+    num_rooms: 3,
+    num_beds: 4,
+    num_baths: 2,
+    listing_type: "whole house",
+    price: 1000,
+    self_check_in: true,
+    parking: true,
+    kitchen: true,
+    washer: true,
+    dryer: true,
+    dishwasher: true,
+    wifi: true,
+    tv: true,
+    bathroom_essentials: true,
+    bedroom_comforts: true,
+    coffee_maker: true,
+    hair_dryer: true,
+    location: "San Francisco, California, United States",
+    location_description: "This tree-lined neighborhood is sandwiched between Lake Street, Mountain Lake Park, and the Presidio on one side and the shops and cafes of California and Clement Streets on the other. It is on the North side of town close to the Golden Gate Bridge.",
+    lat: 37.78457,
+    long: -122.46945,
+    host_id: User.all[(0...num_hosts).to_a.sample].id
+  )
+
+  # # Listing 10
+  Listing.create(
+    title: "Stylish Home with Fireplace and Deck near Golden Gate Park",
+    description: "Discover a quiet oasis right in the middle of the city. Filled with light and charm with all the comforts for every family member, young and old. Prepare meals in a home-style kitchen and dine at a formal table. Relax by the outdoor fire pit while looking out at the San Francisco skyline.",
+    num_guests: 8,
+    num_rooms: 4,
+    num_beds: 5,
+    num_baths: 3,
+    listing_type: "whole house",
+    price: 799,
+    self_check_in: true,
+    parking: true,
+    kitchen: true,
+    washer: true,
+    dryer: true,
+    dishwasher: true,
+    wifi: true,
+    tv: true,
+    bathroom_essentials: true,
+    bedroom_comforts: true,
+    coffee_maker: true,
+    hair_dryer: true,
+    location: "San Francisco, California, United States",
+    location_description: "The house is in the Lone Mountain neighborhood, next to University of San Francisco and a few blocks from Golden Gate Park, with its gorgeous trails and the De Young Museum. Walk to the Divisadero Corridor to discover new hot restaurants.",
+    lat: 37.77858,
+    long: -122.4492,
+    host_id: User.all[(0...num_hosts).to_a.sample].id
+  )
+
+  # # Listing 11
+  Listing.create(
+    title: "Retreat in a Roomy Apartment in Mission Dolores / Castro",
+    description: "Stay in the vibrant heart of SF in a chic apt favored by airbnb employees! Steps from Dolores Park, Michelin star restaurants, and hip bars, this exceptionally-designed oasis is a walker's and foodie's paradise, unmatched in comfort and style.",
+    num_guests: 2,
+    num_rooms: 1,
+    num_beds: 1,
+    num_baths: 1,
+    listing_type: "whole apartment",
+    price: 269,
+    self_check_in: true,
+    parking: true,
+    kitchen: true,
+    washer: true,
+    dryer: true,
+    dishwasher: true,
+    wifi: true,
+    tv: true,
+    bathroom_essentials: true,
+    bedroom_comforts: true,
+    coffee_maker: true,
+    hair_dryer: true,
+    location: "San Francisco, California, United States",
+    location_description: "Spectacular location in SF’s hottest neighborhood - walk to shops, bars and world-class eateries, with Dolores Park's warm breezes a block away. Also steps from 6 public transportation lines with direct access to Union Square, MOMA+ Golden Gate Park.",
+    lat: 37.76166,
+    long: -122.42943,
+    host_id: User.all[(0...num_hosts).to_a.sample].id
+  )
+
+  # # Listing 12
+  Listing.create(
+    title: "Near Moscone Center, Privacy with Style - the SoMa Loft",
+    description: "SoMa Second Home - the SoMa Loft - is a private, airy and bright SoMa loft style apartment. Unwind amongst the globally inspired decor, while the sun streams in through the giant windows, or head into the shared courtyard for a nap in the sun.",
+    num_guests: 3,
+    num_rooms: 1,
+    num_beds: 1,
+    num_baths: 1,
+    listing_type: "whole apartment",
+    price: 289,
+    self_check_in: true,
+    parking: true,
+    kitchen: true,
+    washer: true,
+    dryer: true,
+    dishwasher: true,
+    wifi: true,
+    tv: true,
+    bathroom_essentials: true,
+    bedroom_comforts: true,
+    coffee_maker: true,
+    hair_dryer: true,
+    location: "San Francisco, California, United States",
+    location_description: "South of Market is one of the most diversified neighborhoods in San Francisco, close to everywhere. Walking distance to Moscone Center, MoMa, AT&T Park and Union Square. Whole Foods is only a block away. SoMa Second Home is surrounded by cafes, restaurants, breweries, clubs and shops.",
+    lat: 37.77945,
+    long: -122.40382,
+    host_id: User.all[(0...num_hosts).to_a.sample].id
+  )
 
 end

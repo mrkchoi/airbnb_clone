@@ -6,9 +6,10 @@
 #  title                :string
 #  description          :text
 #  num_guests           :integer
-#  type                 :string
+#  num_rooms            :integer
 #  num_beds             :integer
 #  num_baths            :integer
+#  listing_type         :string
 #  price                :integer
 #  self_check_in        :boolean          default(TRUE)
 #  parking              :boolean          default(TRUE)
@@ -29,7 +30,6 @@
 #  host_id              :integer
 #  created_at           :datetime         not null
 #  updated_at           :datetime         not null
-#  num_rooms            :integer
 #
 
 class Listing < ApplicationRecord

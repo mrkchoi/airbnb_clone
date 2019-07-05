@@ -6,7 +6,6 @@
 #  title                :string
 #  description          :text
 #  num_guests           :integer
-#  type                 :string
 #  num_beds             :integer
 #  num_baths            :integer
 #  price                :integer
@@ -30,6 +29,7 @@
 #  created_at           :datetime         not null
 #  updated_at           :datetime         not null
 #  num_rooms            :integer
+#  listing_type         :string
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
