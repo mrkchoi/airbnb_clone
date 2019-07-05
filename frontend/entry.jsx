@@ -5,6 +5,7 @@ import 'normalize.css';
 import Root from './components/root';
 
 import { signUp, logIn, logOut } from './actions/session_actions';
+import { fetchListings } from './actions/listing_actions';
 import configureStore from './store/store';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -30,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.signUp = signUp;
   window.logIn = logIn;
   window.logOut = logOut;
+  window.fetchListings = fetchListings;
   // TESTING END
 
   ReactDOM.render(
