@@ -347,7 +347,7 @@ ActiveRecord::Base.transaction do
     # Personal users
     if idx < 9
       u = User.all[idx]
-      file = EzDownload.open("https://aerbnb-seeds.s3-us-west-1.amazonaws.com/photos/users/0#{idx+1}-user.jpg")  
+      file = EzDownload.open("https://aerbnb-seeds.s3-us-west-1.amazonaws.com/photos/users/0#{idx+1}-user.jpg")
       u.photo.attach(io: file, filename: "0#{idx+1}-user.jpg")
       u.save!
     else
@@ -1368,5 +1368,5 @@ ActiveRecord::Base.transaction do
       end
     end
 
-    
+
 end

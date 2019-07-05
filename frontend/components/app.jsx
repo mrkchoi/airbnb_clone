@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom';
 import { AuthRoute } from '../util/route_util';
 
 import Header from './navbar/header';
+import ListingIndexContainer from './listings/listing_index_container';
 
 
 const App = () => {
@@ -18,6 +19,8 @@ const App = () => {
           </p>
         </div>
       </div>
+
+      <ListingIndexContainer />
     </main>
   );
 }

@@ -8,6 +8,8 @@ import { signUp, logIn, logOut } from './actions/session_actions';
 import { fetchListings } from './actions/listing_actions';
 import configureStore from './store/store';
 
+// import { fetchListings } from './util/listing_api_util';
+
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
 

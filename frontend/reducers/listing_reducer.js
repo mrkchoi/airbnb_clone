@@ -11,7 +11,8 @@ const listingReducer = (oldState = {}, action) => {
 
   switch(action.type) {
     case RECEIVE_ALL_LISTINGS:
-      return action.listings;
+      action.listings.forEach(listing => newState[listing.id] = listing)
+      return newState;
     case RECEIVE_LISTING:
       newState[action.listing.id] = action.listing;
       return newState;
