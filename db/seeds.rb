@@ -588,4 +588,34 @@ ActiveRecord::Base.transaction do
     host_id: User.all[(0...num_hosts).to_a.sample].id
   )
 
+
+
+
+  ####################################
+  # Listing Photos
+  ####################################
+
+  num_listings = Listing.all.length
+
+  (0...num_listings).each do |idx|
+    (0...8).each do |photo_idx|
+      listing = Listing.all[idx]
+
+      if idx < 9
+        file = EzDownload.open("https://aerbnb-seeds.s3-us-west-1.amazonaws.com/photos/listings/SF/0#{idx+1}-SF/0#{idx+1}-0#{photo_idx+1}-SF.jpg")  
+        listing.photos.attach(io: file, filename: "0#{idx+1}-0#{photo_idx+1}-SF.jpg")
+      else
+        file = EzDownload.open("https://aerbnb-seeds.s3-us-west-1.amazonaws.com/photos/listings/SF/#{idx+1}-SF/#{idx+1}-0#{photo_idx+1}-SF.jpg")  
+        listing.photos.attach(io: file, filename: "#{idx+1}-0#{photo_idx+1}-SF.jpg")
+      end
+
+      listing.save!
+    end
+  end
+
+
+
+
+
+
 end

@@ -1,12 +1,22 @@
 class Api::ListingsController < ApplicationController
   def index
     @listings = Listing.with_attached_photos.all
-    render :index  
+
+    if @listings
+      render :index  
+    else
+      render json: ["Listings not found!"], status: 422
+    end
   end
 
   def show
-    @listing = Listing.with_attached_photos.find(params[:id])
-    render :show
+    @listing = Listing.with_attached_photos.find_by(id: params[:id])
+
+    if @listing
+      render :show
+    else
+      render json: ["Listing not found!"], status: 422
+    end
   end
   
   private
