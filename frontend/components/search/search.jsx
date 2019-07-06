@@ -16,7 +16,7 @@ class Search extends React.Component {
           listings={listings} 
           fetchListings={fetchListings}
           fetchListing={fetchListing} />
-        <ListingMap />
+        <ListingMap listings={listings} />
       </div>
     );
   }

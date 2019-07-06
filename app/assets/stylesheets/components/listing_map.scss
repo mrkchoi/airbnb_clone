@@ -1,5 +1,19 @@
-.map-container {
-  width: 500px;
+#map-container {
   height: 500px;
+  min-width: 350px;
+  height: 100vh;
+  flex: 1;
+}
+
+.gm-style-mtc {
+  display: none;
+} 
+
+.gm-svpc {
+  display: none;
+}
+
+.gm-style-cc {
+  display: none;
 }
 
