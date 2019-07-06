@@ -1,8 +1,9 @@
 
-export const fetchListings = () => {
+export const fetchListings = (filters) => {
   return $.ajax({
     method: 'GET',
-    url: `/api/listings`
+    url: `/api/listings`,
+    filters
   });
 }
 
@@ -36,3 +37,8 @@ export const deleteListing = id => {
   });
 }
 
+dispatch(fetchListings({
+  northEast: {lat: "37.792266", lng: "-122.399775"},
+  southWest: {lat: "37.787823", lng: "-122.405092"}
+}))
+  .then(res => console.log(res));

@@ -43,32 +43,11 @@ class Listing < ApplicationRecord
     foreign_key: :host_id,
     class_name: 'User'
 
+  def self.in_bounds(bounds)
+    self.where('lat < ?', bounds[:northEast][:lat].to_f)
+      .where('lat >?', bounds[:southWest][:lat].to_f)
+      .where('long < ?', bounds[:northEast][:lng].to_f)
+      .where('long > ?', bounds[:southWest][:lng].to_f)
+  end
     
 end
-
-
-
-# title
-# description
-# num_guests
-# type
-# num_beds
-# num_baths
-# price
-# self_check_in
-# parking
-# kitchen
-# washer
-# dryer
-# dishwasher
-# wifi
-# tv
-# bathroom_essentials
-# bedroom_comforts
-# coffee_maker
-# hair_dryer
-# location
-# location_description
-# lat
-# long
-# host_id
