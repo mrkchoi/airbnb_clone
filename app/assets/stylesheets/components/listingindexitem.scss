@@ -8,6 +8,11 @@
   color: rgb(72, 72, 72);
   padding: 4px;
   margin-bottom: 1.8rem;  
+  cursor: pointer;
+}
+
+.listingindexitem__main:hover {
+  box-shadow: 0 0 15px rgba(0,0,0,0.13);
 }
 
 // Item carousel
@@ -31,7 +36,7 @@
 
 .slider-control-centerright button:hover,
 .slider-control-centerleft button:hover {
-  opacity: 0.5 !important;
+  opacity: 1 !important;
 }
 
 // Item content

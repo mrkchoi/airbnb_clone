@@ -71,7 +71,7 @@ class ListingIndexItem extends React.Component {
           <div className="listingindexitem__content-bottom">
             <div className="listingindexitem__content-reviews">
               <p className="listingindexitem__content-reviews-total">
-                <i class="fas fa-star"></i>
+                <i className="fas fa-star"></i>
                 4.96
                 <span>(27)</span>
               </p>
