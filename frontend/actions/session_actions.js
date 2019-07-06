@@ -20,6 +20,7 @@ const logoutCurrentUser = () => {
 };
 
 const receiveSessionErrors = errors => {
+  // debugger
   return ({
     type: RECEIVE_SESSION_ERRORS,
     errors: errors.responseJSON,

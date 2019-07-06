@@ -9,6 +9,7 @@
     "css-loader": "^3.0.0",
     "lodash": "^4.17.11",
     "normalize.css": "^8.0.1",
+    "nuka-carousel": "^4.5.8",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.1.0",

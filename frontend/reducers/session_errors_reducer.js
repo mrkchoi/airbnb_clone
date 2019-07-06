@@ -22,7 +22,7 @@ const sessionErrorsReducer = (oldState = defaultState, action) => {
     case CLOSE_MODAL:
       return defaultState;
     default:
-      return oldState;
+      return [];
   }
 };
 

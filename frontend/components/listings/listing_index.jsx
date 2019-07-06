@@ -8,6 +8,7 @@ class ListingIndex extends React.Component {
 
   componentDidMount() {
     this.props.fetchListings();
+    // this.props.fetchListing(102);
   }
   
   render () {
@@ -20,14 +21,14 @@ class ListingIndex extends React.Component {
     }
 
     return (
-      <div>
+      <div className="listingindex__main">
         <h2>
           ListingIndex
         </h2> 
 
-        <ul>
+        <div>
           {listings.map((listing, idx) => <ListingIndexItem listing={listing} key={idx}/>)}
-        </ul>
+        </div>
       </div>
     );  
   }

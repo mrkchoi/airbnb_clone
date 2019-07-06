@@ -1,0 +1,126 @@
+
+// Main container
+.listingindexitem__main {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid rgb(235, 235, 235);
+  border-radius: 4px;
+  color: rgb(72, 72, 72);
+  padding: 4px;
+  margin-bottom: 1.8rem;  
+}
+
+// Item carousel
+.listingindexitem__carousel-wrapper {
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.listingindexitem__carousel {
+  // max-width: 300px;
+  // border-radius: 3px;
+}
+.listingindexitem__carousel-wrapper {}
+.listingindexitem__carousel-item {}
+
+.slider-control-centerright button,
+.slider-control-centerleft button {
+  opacity: 0.2 !important;
+  transition: all 100ms ease-in;
+}
+
+.slider-control-centerright button:hover,
+.slider-control-centerleft button:hover {
+  opacity: 0.5 !important;
+}
+
+// Item content
+.listingindexitem__content-wrapper {
+  padding: 1.2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;  
+}
+
+// Content top
+.listingindexitem__content-top {}
+.listingindexitem__content-flair {
+  display: flex;
+  color: rgb(145, 70, 105);
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 12px;
+  align-items: center;
+}
+.listingindexitem__content-flair p {
+  margin-bottom: 0;
+}
+
+.listingindexitem__content-flair-verified span {
+  background-color: rgb(145, 70, 105);
+  display: inline-block;
+  padding: 2px 4px;
+  border-radius: 5px;
+  color: white;
+  margin-right: 2px;
+}
+
+.listingindexitem__content-flair-separator {
+  font-size: 0.4rem;
+}
+
+.listingindexitem__content-title {
+  margin: 8px 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.listingindexitem__content-stats {
+  font-size: 15px;
+  font-weight: 300;
+}
+.listingindexitem__content-amenities {
+  font-size: 15px;  
+  font-weight: 300;
+}
+
+.listingindexitem__content-stats-inner,
+.listingindexitem__content-amenities-inner {
+  display: flex;
+  align-items: center;
+}
+.listingindexitem__content-stats-inner span,
+.listingindexitem__content-amenities-inner span {
+  font-size: 0.5rem;
+}
+
+// Content bottom
+.listingindexitem__content-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.listingindexitem__content-reviews {}
+
+.listingindexitem__content-reviews-total {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.listingindexitem__content-reviews-total i {
+  font-size: .6rem;
+  color: rgb(145, 70, 105);
+  margin-right: 2px;
+}
+
+.listingindexitem__content-reviews-total span {
+  color: rgb(118, 118, 118);
+  font-weight: 300;
+}
+
+
+.listingindexitem__content-pricing {
+  font-size: 16px;
+  font-weight: 500;
+}
+
