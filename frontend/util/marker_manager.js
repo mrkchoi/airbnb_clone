@@ -6,15 +6,13 @@ class MarkerManager {
   }
 
   updateMarkers(listings) {
-    console.log('time to update!');
+    console.log('updating markers...');
     
     if (listings !== []) {
       for (let i = 0; i < listings.length; i++) {
         this.createMarkerFromListing(listings[i]);
       }
     }
-
-    console.log(this.markers);
   }
 
   createMarkerFromListing(listing) {

@@ -8,7 +8,12 @@ class Search extends React.Component {
   }
 
   render() {
-    let { listings, fetchListings, fetchListing } = this.props;
+    let { 
+      listings, 
+      fetchListings, 
+      fetchListing, 
+      updateBounds 
+    } = this.props;
 
     return(
       <div className="search__container-main">
@@ -16,7 +21,9 @@ class Search extends React.Component {
           listings={listings} 
           fetchListings={fetchListings}
           fetchListing={fetchListing} />
-        <ListingMap listings={listings} />
+        <ListingMap 
+          listings={listings} 
+          updateBounds={updateBounds} />
       </div>
     );
   }

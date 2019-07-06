@@ -36,9 +36,3 @@ export const deleteListing = id => {
     url: `/api/listings/${id}`
   });
 }
-
-dispatch(fetchListings({
-  northEast: {lat: "37.792266", lng: "-122.399775"},
-  southWest: {lat: "37.787823", lng: "-122.405092"}
-}))
-  .then(res => console.log(res));

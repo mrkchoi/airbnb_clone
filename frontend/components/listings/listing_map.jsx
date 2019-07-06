@@ -15,9 +15,22 @@ class ListingMap extends React.Component {
       zoom: 13
     };
 
+    const map = this.refs.map;
     this.map = new google.maps.Map(this.mapNode, mapOptions);
     this.MarkerManager = new MarkerManager(this.map);
     this.MarkerManager.updateMarkers(this.props.listings);
+
+    google.maps.event.addListener(this.map, 'idle', () => {
+      const { north, south, east, west } = this.map.getBounds().toJSON();
+      let currentBounds = this.map.getBounds();
+
+      let bounds = {
+        northEast: { lat: north, lng: east },
+        southWest: { lat: south, lng: west }
+      };
+      
+      this.props.updateBounds(bounds);
+    });
   }
   
   componentDidUpdate(prevProps, prevState) {
