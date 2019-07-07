@@ -1,5 +1,5 @@
 import React from 'react';
-import PulseLoader from 'react-spinners/PulseLoader';
+import PulseLoaderAnimation from "../loaders/pulse_loader";
 
 import ListingIndexItem from './ListingIndexItem';
 
@@ -17,26 +17,19 @@ class ListingIndex extends React.Component {
     // this.props.fetchListings();
   }
 
-  componentDidUpdate() {
-    setTimeout(() => {
-      window.dispatchEvent(new Event("resize"));
-    }, 1);
-  }
+  // componentDidUpdate() {
+  //   setTimeout(() => {
+  //     window.dispatchEvent(new Event("resize"));
+  //   }, 1);
+  // }
 
   render() {
     let { listings } = this.props;
 
     if (this.state.loading || !listings) {
-      // debugger
       return (
         <div className="listingindex__main">
-          <PulseLoader
-            className="loading-dots"
-            sizeUnit={"px"}
-            size={12}
-            color={"#008489"}
-            loading={this.state.loading}
-          />
+          <PulseLoaderAnimation loading={this.state.loading} />
         </div>
       );
     }

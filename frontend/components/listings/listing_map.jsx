@@ -12,7 +12,8 @@ class ListingMap extends React.Component {
         lat: 37.773972,
         lng: -122.431297
       },
-      zoom: 13
+      zoom: 13,
+      gestureHandling: "greedy"
     };
 
     const map = this.refs.map;
