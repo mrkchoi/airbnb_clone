@@ -18,7 +18,6 @@ class ListingIndexItem extends React.Component {
       average_rating,
       num_reviews
     } = this.props.listing;
-    // let num_reviews = this.props.listings.reviews.length;
 
     return (
       <div className="listingindexitem__main">
