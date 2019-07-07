@@ -4,7 +4,7 @@ import filterReducer from './filter_reducer';
 
 const uiReducer = combineReducers({
   modal: modalReducer,
-  filter: filterReducer
+  filters: filterReducer
 });
 
 export default uiReducer;

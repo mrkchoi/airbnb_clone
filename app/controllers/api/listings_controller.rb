@@ -1,10 +1,6 @@
 class Api::ListingsController < ApplicationController
   def index
-    if bounds
-      @listings = Listing.in_bounds(bounds).with_attached_photos
-    else
-      @listings = Listing.all.with_attached_photos
-    end
+    @listings = bounds ? Listing.in_bounds(bounds).with_attached_photos : Listing.all.with_attached_photos
     
     if @listings
       render :index  

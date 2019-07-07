@@ -9,8 +9,8 @@ class ListingMap extends React.Component {
   componentDidMount() {
     const mapOptions = {
       center: {
-        lat: 37.771393,
-        lng: -122.405495
+        lat: 37.773972,
+        lng: -122.431297
       },
       zoom: 13
     };
@@ -18,23 +18,26 @@ class ListingMap extends React.Component {
     const map = this.refs.map;
     this.map = new google.maps.Map(this.mapNode, mapOptions);
     this.MarkerManager = new MarkerManager(this.map);
-    this.MarkerManager.updateMarkers(this.props.listings);
 
+    this.registerListeners();
+    this.MarkerManager.updateMarkers(this.props.listings);
+  }
+  
+  componentDidUpdate() {
+    this.MarkerManager.updateMarkers(this.props.listings);
+  }
+
+  registerListeners() {
     google.maps.event.addListener(this.map, 'idle', () => {
       const { north, south, east, west } = this.map.getBounds().toJSON();
-      let currentBounds = this.map.getBounds();
 
       let bounds = {
         northEast: { lat: north, lng: east },
         southWest: { lat: south, lng: west }
       };
-      
+
       this.props.updateBounds(bounds);
     });
-  }
-  
-  componentDidUpdate(prevProps, prevState) {
-    this.MarkerManager.updateMarkers(this.props.listings);
   }
   
   

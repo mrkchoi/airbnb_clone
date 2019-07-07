@@ -2,8 +2,7 @@
 export const fetchListings = (filters) => {
   return $.ajax({
     method: 'GET',
-    url: `/api/listings`,
-    filters
+    url: `/api/listings/?bounds=${JSON.stringify(filters)}`,
   });
 }
 

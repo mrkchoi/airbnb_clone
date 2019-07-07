@@ -7,8 +7,7 @@ class ListingIndex extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchListings();
-    // this.props.fetchListing(102);
+    // this.props.fetchListings();
   }
   
   render () {

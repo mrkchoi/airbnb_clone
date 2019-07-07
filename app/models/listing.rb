@@ -44,10 +44,12 @@ class Listing < ApplicationRecord
     class_name: 'User'
 
   def self.in_bounds(bounds)
-    self.where('lat < ?', bounds[:northEast][:lat].to_f)
-      .where('lat >?', bounds[:southWest][:lat].to_f)
-      .where('long < ?', bounds[:northEast][:lng].to_f)
-      .where('long > ?', bounds[:southWest][:lng].to_f)
+    bounds = JSON.parse(bounds)
+
+    self.where('lat < ?', bounds["northEast"]["lat"].to_f)
+      .where('lat >?', bounds["southWest"]["lat"].to_f)
+      .where('long < ?', bounds["northEast"]["lng"].to_f)
+      .where('long > ?', bounds["southWest"]["lng"].to_f)
   end
     
 end

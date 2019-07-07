@@ -5,14 +5,18 @@ class MarkerManager {
     this.markers = {};
   }
 
-  updateMarkers(listings) {
-    console.log('updating markers...');
-    
-    if (listings !== []) {
-      for (let i = 0; i < listings.length; i++) {
-        this.createMarkerFromListing(listings[i]);
-      }
-    }
+  updateMarkers(listings) {    
+    let listingObj = {};
+    listings.forEach(listing => listingObj[listing.id] = listing);
+
+    listings  
+      .filter(listing => !this.markers[listing.id])
+      .forEach(newListing => this.createMarkerFromListing(newListing));
+
+    Object.keys(this.markers)
+      .filter(listingId => !listingObj[listingId])
+      .forEach(listingId => this.removeMarker(this.markers[listingId]));
+      
   }
 
   createMarkerFromListing(listing) {
@@ -30,6 +34,14 @@ class MarkerManager {
 
       this.markers[listing.id] = marker;
     }
+  }
+
+  removeMarker(marker) {
+    if (this.markers[marker.id]) {
+      this.markers[marker.id].setMap(null);
+      delete this.markers[marker.id];
+    }
+  
   }
 }
 

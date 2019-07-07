@@ -11,7 +11,7 @@ const filterReducer = (oldState = defaultFilters, action) => {
 
   switch(action.type) {
     case UPDATE_BOUNDS:
-      return action.bounds;
+      return merge({}, newState, action.bounds);
     default:
       return oldState;
   }
