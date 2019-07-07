@@ -51,5 +51,23 @@ class Listing < ApplicationRecord
       .where('long < ?', bounds["northEast"]["lng"].to_f)
       .where('long > ?', bounds["southWest"]["lng"].to_f)
   end
+
+  def average_rating
+    rating_total = 0
+    count = 0
+
+    if self.reviews
+      self.reviews.each do |review|
+        rating_total += review.rating
+        count += 1
+      end
+    end
+
+    '%.2f' % (rating_total.to_f / count).round(2)
+  end
+
+  def num_reviews
+    self.reviews.count.to_s
+  end
     
 end
