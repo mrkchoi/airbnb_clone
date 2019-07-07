@@ -1,6 +1,7 @@
 import React from 'react';
 import ListingIndex from '../listings/listing_index';
 import ListingMap from '../listings/listing_map';
+import Header from '../navbar/header';
 
 class Search extends React.Component {
   constructor(props) {
@@ -17,6 +18,7 @@ class Search extends React.Component {
 
     return(
       <div className="search__container-main">
+        <Header type={"header__listing"}/>
         <ListingIndex 
           listings={listings} 
           fetchListings={fetchListings}

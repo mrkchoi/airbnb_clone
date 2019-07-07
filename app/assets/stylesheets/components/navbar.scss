@@ -24,10 +24,20 @@
   transition: 75ms all ease-in;
 }
 
-.header__navbar-link:hover {
+.header__landing .header__navbar-link:hover {
   color: white;
   text-decoration: none;
   border-bottom: 2px solid #fff;
+}
+
+.header__listing .header__navbar-link:hover {
+  color: #484848;
+  text-decoration: none;
+  border-bottom: 2px solid #484848;
+}
+
+.header__listing .header__navbar-link {
+  padding: 2rem .4rem;
 }
 
 .header__navbar-link--logout {}

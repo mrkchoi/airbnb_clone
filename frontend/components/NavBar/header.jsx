@@ -4,8 +4,9 @@ import Modal from '../modal/modal';
 import { Link } from 'react-router-dom';
 
 const Header = (props) => {
+  let { type } = props;
   return (
-    <header className="header__container">
+    <header className={`header__container ${type}`}>
       {/* Modal */}
       <Modal />
 

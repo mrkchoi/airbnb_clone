@@ -3,6 +3,12 @@
   min-width: 350px;
   height: 100vh;
   flex: 1;
+
+  position: sticky !important;
+  right: 0;
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
 }
 
 .gm-style-mtc {
@@ -17,3 +23,6 @@
   display: none;
 }
 
+button.gm-control-active.gm-fullscreen-control {
+  display: none;
+}

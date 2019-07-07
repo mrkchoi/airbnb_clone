@@ -1,6 +1,7 @@
 .header__container {
   display: flex;
   width: 100%;
+  height: 80px;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.5rem;
@@ -15,9 +16,30 @@
 .header__logo-container {}
 
 .header__logo-img {
-  background-image: url(("../../images/logo/01_airbnb-logo-sm-white.png"));
   height: 35px;
   width: 35px;
   background-size: contain;
   display: block;
+}
+
+// LISTING HEADER 
+.header__listing {
+  border-bottom: 1px solid #ccc;
+  background-color: white;
+}
+
+.header__listing .header__logo-img {
+  background-image: url(("../../images/logo/01_airbnb-logo-sm-pink.png"));
+}
+
+.header__listing p,
+.header__listing a {
+  color: #484848;
+}
+
+// LANDING HEADER 
+.header__landing {}
+
+.header__landing .header__logo-img {
+  background-image: url(("../../images/logo/01_airbnb-logo-sm-white.png"));
 }
