@@ -30,6 +30,7 @@ class ListingIndexItem extends React.Component {
                   <img
                     src={photo}
                     key={idx}
+                    style={{minHeight: 200}}
                     className="listingindexitem__carousel-item"
                   />
                 );

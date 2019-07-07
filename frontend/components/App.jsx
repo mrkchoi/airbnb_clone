@@ -10,7 +10,7 @@ const App = () => {
   return (
     <main className="main__container">
       <Switch>
-        <Route exact path="/" component={LandingMain} />
+        <AuthRoute exact path="/" component={LandingMain} />
         {/* <Route exact path="/" component={Landing} /> */}
         <ProtectedRoute path="/listings" component={SearchContainer} />
       </Switch>
