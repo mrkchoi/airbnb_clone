@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import Search from './search';
 import { fetchListings, fetchListing } from '../../actions/listing_actions';
-import { updateBounds } from '../../actions/filter_actions';
+import { updateFilter } from '../../actions/filter_actions';
 
 const msp = state => {
   return ({
@@ -13,7 +13,7 @@ const mdp = dispatch => {
   return ({
     fetchListings: () => dispatch(fetchListings()),
     fetchListing: id => dispatch(fetchListing(id)),
-    updateBounds: bounds => dispatch(updateBounds(bounds))
+    updateFilter: (filter, value) => dispatch(updateFilter(filter, value))
   });
 }
 

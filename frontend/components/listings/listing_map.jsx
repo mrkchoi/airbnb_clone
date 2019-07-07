@@ -36,7 +36,7 @@ class ListingMap extends React.Component {
         southWest: { lat: south, lng: west }
       };
 
-      this.props.updateBounds(bounds);
+      this.props.updateFilter("bounds", bounds);
     });
   }
   

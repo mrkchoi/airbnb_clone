@@ -28,8 +28,8 @@ const removeListing = listing => {
 }
 
 // Thunk action creators
-export const fetchListings = (filterBounds) => dispatch => {
-  return ListingApiUtil.fetchListings(filterBounds)
+export const fetchListings = (filters) => dispatch => {
+  return ListingApiUtil.fetchListings(filters)
     .then(listings => dispatch(receiveAllListings(listings)));
 };
 

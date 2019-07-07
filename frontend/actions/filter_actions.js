@@ -1,17 +1,18 @@
 import { fetchListings } from "./listing_actions";
 
-export const UPDATE_BOUNDS = "UPDATE_BOUNDS"; 
+export const UPDATE_FILTER = "UPDATE_FILTER"; 
 
-const changeBounds = (bounds) => {
+const changeFilter = (filter, value) => {
   return ({
-    type: UPDATE_BOUNDS,
-    bounds: bounds
+    type: UPDATE_FILTER,
+    filter,
+    value
   });
 }
 
-export const updateBounds = (bounds) => {
+export const updateFilter = (filter, value) => {
   return (dispatch, getState) => {
-    dispatch(changeBounds(bounds));
+    dispatch(changeFilter(filter, value));
     return fetchListings(getState().ui.filters)(dispatch);
   }
 };
