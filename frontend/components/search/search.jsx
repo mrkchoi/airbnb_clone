@@ -9,23 +9,23 @@ class Search extends React.Component {
   }
 
   render() {
-    let { 
-      listings, 
-      fetchListings, 
-      fetchListing, 
-      updateFilter 
+    let {
+      listings,
+      fetchListings,
+      fetchListing,
+      updateFilter,
+      currentUser
     } = this.props;
 
-    return(
+    return (
       <div className="search__container-main">
-        <Header type={"header__listing"}/>
-        <ListingIndex 
-          listings={listings} 
+        <Header type={"header__listing"} currentUser={currentUser} />
+        <ListingIndex
+          listings={listings}
           fetchListings={fetchListings}
-          fetchListing={fetchListing} />
-        <ListingMap 
-          listings={listings} 
-          updateFilter={updateFilter} />
+          fetchListing={fetchListing}
+        />
+        <ListingMap listings={listings} updateFilter={updateFilter} />
       </div>
     );
   }

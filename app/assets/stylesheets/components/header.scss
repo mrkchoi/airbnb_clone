@@ -13,7 +13,16 @@
   z-index: 9;
 }
 
-.header__logo-container {}
+.header__logo-container {
+  display: flex;
+  margin-right: 1.8rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__logo-search-container {
+  display: flex;
+}
 
 .header__logo-img {
   height: 35px;
