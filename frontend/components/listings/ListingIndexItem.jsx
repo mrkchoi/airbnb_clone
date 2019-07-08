@@ -1,7 +1,17 @@
 import React from 'react';
 import Carousel from 'nuka-carousel';
+import { withRouter } from 'react-router-dom';
 
 class ListingIndexItem extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleListingClick = this.handleListingClick.bind(this);
+  }
+
+  handleListingClick() {
+    this.props.history.push(`/listings/${this.props.listing.id}`);
+  }
+
   render() {
     let {
       listing_type,
@@ -38,7 +48,10 @@ class ListingIndexItem extends React.Component {
           </Carousel>
         </div>
 
-        <div className="listingindexitem__content-wrapper">
+        <div
+          className="listingindexitem__content-wrapper"
+          onClick={this.handleListingClick}
+        >
           <div className="listingindexitem__content-top">
             <div className="listingindexitem__content-flair">
               <p className="listingindexitem__content-flair-verified">
@@ -92,4 +105,4 @@ class ListingIndexItem extends React.Component {
   }
 }
 
-export default ListingIndexItem;
+export default withRouter(ListingIndexItem);

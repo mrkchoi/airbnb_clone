@@ -4,6 +4,7 @@ import { AuthRoute, ProtectedRoute } from "../util/route_util";
 
 import LandingMain from './landing/landing_main';
 import SearchContainer from './search/search_container';
+import ListingShowContainer from './listings/listing_show/listing_show_container';
 
 
 const App = () => {
@@ -12,7 +13,12 @@ const App = () => {
       <Switch>
         <AuthRoute exact path="/" component={LandingMain} />
         {/* <Route exact path="/" component={Landing} /> */}
-        <ProtectedRoute path="/listings" component={SearchContainer} />
+        <ProtectedRoute 
+          path="/listings/:listingId" 
+          component={ListingShowContainer} />
+        <ProtectedRoute 
+          exact path="/listings" 
+          component={SearchContainer} />
       </Switch>
     </main>
   );
