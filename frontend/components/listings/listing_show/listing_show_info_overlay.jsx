@@ -1,4 +1,5 @@
 import React from "react";
+import RenderStars from '../../stars/render_stars';
 
 class ListingShowInfoOverlay extends React.Component {
   
@@ -16,7 +17,8 @@ class ListingShowInfoOverlay extends React.Component {
               {listing.title}
             </h3>
             <div className="listingshow__overlay-listingstars">
-              {listing.average_rating} ({listing.num_reviews})
+              {RenderStars(listing.average_rating)}
+              <div className="listingshow__overlay-numratings">{listing.num_reviews}</div>
             </div>
           </div>
         </div>

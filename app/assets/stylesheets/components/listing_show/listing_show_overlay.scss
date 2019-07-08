@@ -33,7 +33,22 @@
   letter-spacing: 0.6px;
   margin-bottom: 2.5px;  
 }
-.listingshow__overlay-listingstars {}
+.listingshow__overlay-listingstars {
+  display: flex;
+  align-items: center;
+}
+
+.listingshow__overlay-listingstars i {
+  color: rgb(145,70,105);
+  font-size: 9px;
+}
+
+.listingshow__overlay-numratings {
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: 2px;
+}
+
 .listingshow__overlay-availability-outer {
   display: flex;
   align-items: center;
