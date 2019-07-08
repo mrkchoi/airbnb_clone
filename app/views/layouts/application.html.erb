@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Vacation Rentals, Homes, Experiences &amp; Places - Airbnb</title>
+    <title>Vacation Rentals, Homes, Experiences &amp; Places - Aerbnb</title>
     <meta property="og:title" content="Vacation Rentals, Homes, Experiences &amp; Places - Airbnb">
 
     <% google_api_key = Rails.application.credentials.google[:api_key] %>
     
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{google_api_key}&libraries=places" %>
-    <%# <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyAPRoSEps_3YlY3dCRPABggAq6of7vNpPM&libraries=places" %> %>
 
 
     <link rel="shortcut icon" href="images/favicon/airbnb_logotype_favicon.ico" type="image/x-icon">

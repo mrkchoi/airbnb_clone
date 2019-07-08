@@ -29,7 +29,7 @@ class ListingIndexItem extends React.Component {
                   <img
                     src={photo}
                     key={idx}
-                    style={{minHeight: 200}}
+                    style={{ minHeight: 200 }}
                     className="listingindexitem__carousel-item"
                   />
                 );
@@ -56,8 +56,10 @@ class ListingIndexItem extends React.Component {
             <div className="listingindexitem__content-stats">
               <p className="listingindexitem__content-stats-inner">
                 {num_guests} guests &nbsp;<span>&#8226;</span>&nbsp;{" "}
-                {listing_type}&nbsp; <span>&#8226;</span>&nbsp; {num_beds}{" "}
-                bed(s) &nbsp;<span>&#8226;</span>&nbsp; {num_baths} bath(s)
+                {listing_type}&nbsp; <span>&#8226;</span>&nbsp;{" "}
+                {num_beds == 1 ? "1 bed" : `${num_beds} beds`} &nbsp;
+                <span>&#8226;</span>&nbsp;{" "}
+                {num_baths == 1 ? "1 bath" : `${num_baths} bath`}
               </p>
             </div>
             <div className="listingindexitem__content-amenities">
