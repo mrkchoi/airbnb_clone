@@ -43,7 +43,6 @@ class SearchBar extends React.Component {
   }
 
   handleSubmit(e) {
-    // debugger
     if (e) {
       e.preventDefault();
     }

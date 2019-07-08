@@ -1,19 +1,36 @@
 import React from 'react';
 import MarkerManager from '../../util/marker_manager';
+import { withRouter } from 'react-router-dom';
 
 class ListingMap extends React.Component {
   constructor(props) {
     super(props);
+    this.renderMap = this.renderMap.bind(this);
   }
 
   componentDidMount() {
-    let center = {
-      lat: 37.773972,
-      lng: -122.431297
-    }
+    // let center = {
+    //   lat: 37.773972,
+    //   lng: -122.431297
+    // }
 
+    this.renderMap();
+  }
+  
+  componentDidUpdate(prevProps) {
+    this.MarkerManager.updateMarkers(this.props.listings);
+    if (this.props.mapSearchCoords !== prevProps.mapSearchCoords) {
+      this.renderMap();
+    }
+  }
+
+  componentWillUnmount() {
+    google.maps.event.clearListeners(this.map, 'idle');
+  }
+
+  renderMap() {
     const mapOptions = {
-      center: center,
+      center: this.props.mapSearchCoords,
       zoom: 13,
       gestureHandling: "greedy"
     };
@@ -25,15 +42,12 @@ class ListingMap extends React.Component {
     this.registerListeners();
     this.MarkerManager.updateMarkers(this.props.listings);
   }
-  
-  componentDidUpdate() {
-    this.MarkerManager.updateMarkers(this.props.listings);
-  }
 
   registerListeners() {
+    
     google.maps.event.addListener(this.map, 'idle', () => {
       const { north, south, east, west } = this.map.getBounds().toJSON();
-
+      
       let bounds = {
         northEast: { lat: north, lng: east },
         southWest: { lat: south, lng: west }
@@ -54,4 +68,4 @@ class ListingMap extends React.Component {
   }
 }
 
-export default ListingMap;
+export default withRouter(ListingMap);

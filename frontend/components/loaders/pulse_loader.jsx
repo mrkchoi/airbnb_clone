@@ -8,7 +8,6 @@ import PulseLoader from 'react-spinners/PulseLoader';
   // 4. Render the PulseLoader component if (this.state.loading)
 
 const PulseLoaderAnimation = ({ loading }) => {
-  // debugger
   return (
     <PulseLoader
       className="loading-dots"

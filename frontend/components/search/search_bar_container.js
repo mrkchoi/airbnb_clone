@@ -10,7 +10,6 @@ const msp = state => {
 }
 
 const mdp = dispatch => {
-  // debugger
   return ({
     updateSearchCoords: (lat, lng) => dispatch(updateSearchCoords(lat, lng))
   });

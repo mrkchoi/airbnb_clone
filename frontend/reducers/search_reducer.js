@@ -9,12 +9,11 @@ const defaultState = {
 
 const searchReducer = (oldState = defaultState, action) => {
   Object.freeze(oldState);
-
   switch(action.type) {
     case UPDATE_SEARCH_COORDS:
       return { coords: action.coords };
     default:
-      return defaultState;
+      return oldState;
   }
 };
 
