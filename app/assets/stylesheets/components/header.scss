@@ -38,7 +38,7 @@
 }
 
 .header__listing .header__logo-img {
-  background-image: url(("../../images/logo/01_airbnb-logo-sm-pink.png"));
+  background-image: image-url(("logo/01_airbnb-logo-sm-pink.png"));
 }
 
 .header__listing p,
@@ -50,7 +50,7 @@
 .header__landing {}
 
 .header__landing .header__logo-img {
-  background-image: url(("../../images/logo/01_airbnb-logo-sm-white.png"));
+  background-image: image-url(("logo/01_airbnb-logo-sm-white.png"));
 }
 
 // Logged In Navbar
