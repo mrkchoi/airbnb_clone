@@ -3,6 +3,7 @@
   padding: 1.8rem;
   padding-top: 0;
   min-width: 840px;
+  margin-bottom: 6rem;
 }
 
 .listingindex__header-container {
@@ -15,4 +16,9 @@
 .listingindex__header-sub {
   font-size: 16px;
   font-weight: 300;
+}
+
+.listingindex__header-sub a {
+  color: rgb(0, 132, 137) !important;
+  font-weight: 500;
 }

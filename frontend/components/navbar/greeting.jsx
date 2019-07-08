@@ -26,12 +26,22 @@ class Greeting extends React.Component {
           <p className="header__navbar-welcome-msg">
             Welcome back, {currentUser.username}!
           </p>
-          <a
-            className="header__navbar-link header__navbar-link--logout" 
+          <button className="header__navbar-profile" onClick={() => this.handleOpenModal('profile')}>
+            <div className="header__navbar-profile-photo-container">
+              <img
+                className="header__navbar-profile-photo" 
+                src={currentUser.photoUrl}
+                alt="profile photo"
+              />
+            </div>
+          </button>
+          {/* <a
+            className="header__navbar-link header__navbar-link--logout"
             href="#"
-            onClick={this.handleLogout}>
-              Logout
-          </a>
+            onClick={this.handleLogout}
+          >
+            Logout
+          </a> */}
         </div>
       );
     } else {

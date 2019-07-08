@@ -1,5 +1,6 @@
 import React from 'react';
 import PulseLoaderAnimation from "../loaders/pulse_loader";
+import { Link } from 'react-router-dom';
 
 import ListingIndexItem from './ListingIndexItem';
 
@@ -25,7 +26,33 @@ class ListingIndex extends React.Component {
 
   render() {
     let { listings } = this.props;
+    let listingHeader;
 
+    // Listing Header
+    if (listings.length > 0) {
+      listingHeader = (
+        <div className="listingindex__header-container">
+          <h2 className="listingindex__header">{listings.length}+ Airbnb Plus stays</h2>
+          <p className="listingindex__header-sub">
+            A selection of places to stay verified for quality and design
+          </p>
+        </div>
+      )
+    } else {
+      listingHeader = (
+        <div className="listingindex__header-container">
+          <h2 className="listingindex__header">No Airbnb Plus results</h2>
+          <p className="listingindex__header-sub">
+            Try adjusting your search by moving or zooming out on the map.
+          </p>
+          <p className="listingindex__header-sub">
+            Or see all available listings in <Link to="/#/listings">San Francisco</Link>
+          </p>
+        </div>
+      );
+    }
+
+    // Loading Animation
     if (this.state.loading || !listings) {
       return (
         <div className="listingindex__main">
@@ -36,14 +63,7 @@ class ListingIndex extends React.Component {
 
     return (
       <div className="listingindex__main">
-        <div className="listingindex__header-container">
-          <h2 className="listingindex__header">
-            {listings.length}+ Airbnb Plus stays
-          </h2>
-          <p className="listingindex__header-sub">
-            A selection of places to stay verified for quality and design
-          </p>
-        </div>
+        {listingHeader}
 
         <div>
           {listings.map((listing, idx) => (

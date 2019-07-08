@@ -4,7 +4,7 @@
   height: 80px;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1.5rem;
+  padding: 1rem 0.8rem 1rem 1.5rem;
 
   position: fixed;
   top: 0;
@@ -51,4 +51,29 @@
 
 .header__landing .header__logo-img {
   background-image: url(("../../images/logo/01_airbnb-logo-sm-white.png"));
+}
+
+// Logged In Navbar
+.header__navbar-profile {
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+  height: 80px;
+  padding: 0 1rem;
+}
+
+button.header__navbar-profile:focus {
+  outline: none;
+}
+
+.header__navbar-profile-photo-container {
+  border-radius: 50%;
+  box-shadow: rgb(235, 235, 235) 0px 0px 0px 2px !important;
+  overflow: hidden;
+  width: 30px;
+  height: 30px;
+}
+.header__navbar-profile-photo {
+  max-width: 30px;
+  height: auto;
 }

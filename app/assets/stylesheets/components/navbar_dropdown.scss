@@ -1,0 +1,30 @@
+.navbar__dropdown-container {
+
+}
+
+.navbar__dropdown-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar__dropdown-listitem {
+
+}
+
+.navbar__dropdown-link {
+  padding: 1.1rem 0;
+  display: inline-block;
+  width: -webkit-fill-available;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  margin: 0 1.1rem;
+  cursor: pointer;
+}
+
+.navbar__dropdown-link:hover {
+  border-bottom: 1px solid rgba(0,0,0,.4);
+}
+
+.navbar__dropdown-link--special {
+  color: rgb(0, 132, 137);
+}

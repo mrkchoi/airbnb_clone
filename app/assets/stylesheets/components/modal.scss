@@ -16,6 +16,25 @@
   transform: translate(-50%, -50%);
 }
 
+
+// Profile dropdown modal
+.modal__background--profile {
+  background: transparent;
+}
+
+.modal__child--profile {
+  position: absolute;
+  top: 80px;
+  right: 6px;
+  left: initial;
+  transform: initial;
+  background-color: white;
+  width: 280px;
+  box-shadow: 0px 3px 4px rgba(0,0,0, 0.2) !important;
+}
+
+
+
 // Modal divider
 
 .modal__divider-container {
@@ -145,3 +164,5 @@ a#modal__btn-submit-id.modal__btn--submit-demo:active {
   font-size: 1.1rem;
   font-weight: 400;
 }
+
+
