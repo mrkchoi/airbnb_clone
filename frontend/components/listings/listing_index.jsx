@@ -1,7 +1,6 @@
 import React from 'react';
 import PulseLoaderAnimation from "../loaders/pulse_loader";
 import { Link } from 'react-router-dom';
-
 import ListingIndexItem from './ListingIndexItem';
 
 class ListingIndex extends React.Component {
@@ -18,15 +17,10 @@ class ListingIndex extends React.Component {
     // this.props.fetchListings();
   }
 
-  // componentDidUpdate() {
-  //   setTimeout(() => {
-  //     window.dispatchEvent(new Event("resize"));
-  //   }, 1);
-  // }
-
   render() {
-    let { listings } = this.props;
+    let { listings, updateSearchCoords } = this.props;
     let listingHeader;
+    // debugger
 
     // Listing Header
     if (listings.length > 0) {
@@ -46,7 +40,15 @@ class ListingIndex extends React.Component {
             Try adjusting your search by moving or zooming out on the map.
           </p>
           <p className="listingindex__header-sub">
-            Or see all available listings in <Link to="/#/listings">San Francisco</Link>
+            Or see all available listings in{" "}
+            <a
+              onClick={() => updateSearchCoords(
+                37.773972,
+                -122.431297
+              )}
+            >
+              San Francisco
+            </a>
           </p>
         </div>
       );
