@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class NavbarDropdown extends React.Component {
   constructor(props) {
@@ -30,6 +31,7 @@ class NavbarDropdown extends React.Component {
           </li>
           <li className="navbar__dropdown-listitem">
             <a
+              target="_blank"
               href="https://www.linkedin.com/in/kenneth-choi-42502a35/"
               className="navbar__dropdown-link navbar__dropdown-link--special"
             >
@@ -38,6 +40,7 @@ class NavbarDropdown extends React.Component {
           </li>
           <li className="navbar__dropdown-listitem">
             <a
+              target="_blank"
               href="https://github.com/mrkchoi"
               className="navbar__dropdown-link navbar__dropdown-link--special"
             >
@@ -46,6 +49,7 @@ class NavbarDropdown extends React.Component {
           </li>
           <li className="navbar__dropdown-listitem">
             <a
+              target="_blank"
               href="http://kchoi.io/"
               className="navbar__dropdown-link navbar__dropdown-link--special"
             >
