@@ -18,7 +18,7 @@ class ListingShow extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      loading: true
+      loading: false
     }
 
     setTimeout(() => {

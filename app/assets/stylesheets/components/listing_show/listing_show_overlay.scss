@@ -1,0 +1,65 @@
+.listingshow__overlay-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  box-shadow: 0 -1px 3px rgba(0,0,0,.1);  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 1rem 1.4rem;
+}
+.listingshow__overlay-listing {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;  
+}
+.listingshow__overlay-logo-outer {}
+.listingshow__overlay-logo {
+  background-image: image-url("logo/01_airbnb-plus-purple.png");
+  background-size: contain;
+  width: 75px;
+  height: 42px;
+  background-repeat: no-repeat;
+  margin-right: 2rem;
+}
+.listingshow__overlay-listing-outer {}
+.listingshow__overlay-listingtitle {
+  text-transform: uppercase;
+  color: #767676;
+  font-size: 12px;
+  letter-spacing: 0.6px;
+  margin-bottom: 2.5px;  
+}
+.listingshow__overlay-listingstars {}
+.listingshow__overlay-availability-outer {
+  display: flex;
+  align-items: center;
+}
+.listingshow__overlay-pricing {
+  font-size: 15px;
+  font-weight: 600;
+  color: #484848;
+}
+.listingshow__overlay-pricing span {
+  font-weight: 400;
+}
+.listingshow__overlay-availability {}
+.listingshow__overlay-availability-btn {
+  background-color: rgb(145, 70, 105);
+  padding: 1rem 1.8rem;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-right: 1.2rem;
+  outline: none;
+  cursor: pointer;
+  margin-left: 3rem;
+  transition: all 75ms ease-in;
+}
+
+.listingshow__overlay-availability-btn:active {
+  background-color: rgb(119, 49, 82);
+}
