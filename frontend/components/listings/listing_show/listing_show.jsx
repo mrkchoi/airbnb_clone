@@ -4,6 +4,7 @@ import PulseLoaderAnim from '../../loaders/pulse_loader';
 import Header from '../../navbar/header';
 import ListingShowInfoOverlay from './listing_show_info_overlay';
 import ListingShowHero from './listing_show_hero';
+import ListingShowDescription from './listing_show_description';
 import ListingShowPhotoOverview from './listing_show_photo_overview';
 import ListingShowAmenities from './listing_show_amenities';
 import ListingShowLocation from './listing_show_location';
@@ -73,17 +74,20 @@ class ListingShow extends React.Component {
 
     return (
       <div className="listingshow__container-main">
-        <Header type={"header__listing header__listing-show"} currentUser={currentUser} />
-        Listing Show Page
-        
+        <Header type={"header__listing header__listing-show"} currentUser={currentUser} />        
+
         <ListingShowInfoOverlay listing={listing}/>
         <ListingShowHero listing={listing}/>
-        <ListingShowPhotoOverview listing={listing}/>
-        <ListingShowAmenities listing={listing}/>
-        <ListingShowLocation listing={listing}/>
-        <ListingShowReviews listing={listing}/>
-        <ListingShowMeetHost listing={listing}/>
-        <ListingShowFooter/>
+        
+        <div className="listingshow__content-wrapper">
+          <ListingShowDescription listing={listing}/>
+          <ListingShowPhotoOverview listing={listing}/>
+          <ListingShowAmenities listing={listing}/>
+          <ListingShowLocation listing={listing}/>
+          <ListingShowReviews listing={listing}/>
+          <ListingShowMeetHost listing={listing}/>
+          <ListingShowFooter/>
+        </div>
       </div>
     );
   }

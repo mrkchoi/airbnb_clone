@@ -1,0 +1,41 @@
+.listingshow__hero-container {
+  width: 100vw;
+  padding: 0 25px;
+  display: flex;
+  justify-content: space-between;
+  height: 685px;
+}
+
+.listingshow__hero-header--outer {
+  margin-right: 1rem;
+  height: 100%;
+  background-color: #F2F2F2;
+  width: 33.33%;
+}
+.listingshow__hero-header--inner {
+  padding: 3rem;
+}
+
+.listingshow__hero-header-logo {
+  background-image: image-url("logo/01_airbnb-plus-purple.png");
+  height: 45px;
+  width: 95px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  // margin-left: 1.2rem;
+}
+.listingshow__hero-header-text {
+  font-size: 48px;
+  line-height: initial;
+  font-weight: 300;
+  color: #484848;
+  margin-top: 1.8rem;
+}
+.listingshow__hero-splash-outer {
+  height: 100%;
+  flex: 1;
+  // background-color: pink;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}

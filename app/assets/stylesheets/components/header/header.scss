@@ -81,4 +81,13 @@ button.header__navbar-profile:focus {
 // Listing Show Page Header
 .header__listing-show {
   position: relative;
+  border-bottom: 1px solid transparent;  
+}
+
+.header__listing-show .header__logo-img {
+  background-image: image-url(("logo/01_airbnb-logo-sm-purple.png"));
+}
+
+.header__listing-show .header__search-input::placeholder {
+  content: 'Search';
 }

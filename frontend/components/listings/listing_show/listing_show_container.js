@@ -14,7 +14,7 @@ const msp = (state, ownProps) => {
 
 const mdp = dispatch => {
   return ({
-    fetchListing: (id) => dispatch(fetchListing(id))
+    fetchListing: (id) => dispatch(fetchListing(id)),
   });
 }
 
