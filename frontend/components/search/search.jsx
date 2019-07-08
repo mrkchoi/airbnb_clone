@@ -14,7 +14,8 @@ class Search extends React.Component {
       fetchListings,
       fetchListing,
       updateFilter,
-      currentUser
+      currentUser,
+      mapSearchCoords
     } = this.props;
 
     return (
@@ -25,7 +26,11 @@ class Search extends React.Component {
           fetchListings={fetchListings}
           fetchListing={fetchListing}
         />
-        <ListingMap listings={listings} updateFilter={updateFilter} />
+        <ListingMap
+          listings={listings}
+          updateFilter={updateFilter}
+          mapSearchCoords={mapSearchCoords}
+        />
       </div>
     );
   }

@@ -36,7 +36,14 @@ class ListingIndex extends React.Component {
 
     return (
       <div className="listingindex__main">
-        <h2>ListingIndex</h2>
+        <div className="listingindex__header-container">
+          <h2 className="listingindex__header">
+            {listings.length}+ Airbnb Plus stays
+          </h2>
+          <p className="listingindex__header-sub">
+            A selection of places to stay verified for quality and design
+          </p>
+        </div>
 
         <div>
           {listings.map((listing, idx) => (

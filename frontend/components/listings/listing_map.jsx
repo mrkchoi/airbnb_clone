@@ -7,16 +7,18 @@ class ListingMap extends React.Component {
   }
 
   componentDidMount() {
+    let center = {
+      lat: 37.773972,
+      lng: -122.431297
+    }
+
     const mapOptions = {
-      center: {
-        lat: 37.773972,
-        lng: -122.431297
-      },
+      center: center,
       zoom: 13,
       gestureHandling: "greedy"
     };
 
-    const map = this.refs.map;
+    // const map = this.refs.map;
     this.map = new google.maps.Map(this.mapNode, mapOptions);
     this.MarkerManager = new MarkerManager(this.map);
 

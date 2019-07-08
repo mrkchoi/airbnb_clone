@@ -4,10 +4,11 @@ import { fetchListings, fetchListing } from '../../actions/listing_actions';
 import { updateFilter } from '../../actions/filter_actions';
 
 const msp = state => {
-  return ({
+  return {
     listings: Object.values(state.entities.listings),
-    currentUser: state.entities.users[state.session.id]
-  });
+    currentUser: state.entities.users[state.session.id],
+    mapSearchCoords: state.ui.search.coords
+  };
 }
 
 const mdp = dispatch => {

@@ -53,6 +53,8 @@ class SearchBar extends React.Component {
         const lat = res[0].geometry.location.lat();
         const lng = res[0].geometry.location.lng();
         this.props.history.push(`/listings?lat=${lat}&lng=${lng}`);
+        
+        this.props.updateSearchCoords(lat, lng);
       } else {
         this.props.history.push(`/listings?lat=37.7749&lng=122.4194`);
       }

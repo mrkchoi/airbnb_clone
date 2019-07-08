@@ -1,7 +1,7 @@
 import React from 'react';
 import GreetingContainer from './greeting_container';
 import Modal from '../modal/modal';
-import SearchBar from '../search/search_bar';
+import SearchBarContainer from '../search/search_bar_container';
 
 import { Link } from 'react-router-dom';
 
@@ -10,7 +10,7 @@ const Header = (props) => {
   let searchBar;
 
   if (props.currentUser) {
-    searchBar = <SearchBar />;
+    searchBar = <SearchBarContainer />;
   } else {
     searchBar = null;
   }

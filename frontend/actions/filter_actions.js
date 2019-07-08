@@ -10,6 +10,13 @@ const changeFilter = (filter, value) => {
   });
 }
 
+// const changeSearchFilter = (coords) => {
+//   return ({
+//     type: UPDATE_SEARCH_FILTER,
+//     searchLocation: coords
+//   });
+// }
+
 export const updateFilter = (filter, value) => {
   return (dispatch, getState) => {
     dispatch(changeFilter(filter, value));
