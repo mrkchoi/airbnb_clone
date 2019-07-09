@@ -19,7 +19,7 @@ class ListingShow extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      loading: false
+      loading: true
     }
 
     setTimeout(() => {
@@ -31,11 +31,20 @@ class ListingShow extends React.Component {
   
   componentDidMount() {
     let listingId = this.props.match.params.listingId;
-    this.props.fetchListing(listingId);
+    this.props.fetchListing(listingId)
+      .then(action => this.props.fetchHost(action.listing.host_id));
+    this.props.fetchReviews(listingId);
   }
+
+  // componentDidUpdate(prevProps, prevState) {
+  //   // if (this.props.listing) {
+  //   //   this.props.fetchHost(this.props.listing.hostId);
+  //   // }
+  // }
+  
   
   render() {
-    if (this.state.loading || !this.props.listing) {
+    if (this.state.loading || !this.props.listing || !this.props.reviews || !this.props.users) {
       return <PulseLoaderAnim />
     }
 
@@ -70,7 +79,8 @@ class ListingShow extends React.Component {
       num_reviews,
       photoUrls,
     } = this.props.listing;
-    let { listing, currentUser } = this.props;
+    let { listing, currentUser, users, reviews } = this.props;
+    let host = users[listing.host_id];
 
     return (
       <div className="listingshow__container-main">
@@ -78,14 +88,14 @@ class ListingShow extends React.Component {
 
         <ListingShowInfoOverlay listing={listing}/>
         <ListingShowHero listing={listing}/>
-        
+
         <div className="listingshow__content-wrapper">
-          <ListingShowDescription listing={listing}/>
+          <ListingShowDescription listing={listing} host={host}/>
           <ListingShowPhotoOverview listing={listing}/>
           <ListingShowAmenities listing={listing}/>
           <ListingShowLocation listing={listing}/>
-          <ListingShowReviews listing={listing}/>
-          <ListingShowMeetHost listing={listing}/>
+          <ListingShowReviews listing={listing} reviews={reviews}/>
+          <ListingShowMeetHost listing={listing} host={host}/>
           <ListingShowFooter/>
         </div>
       </div>

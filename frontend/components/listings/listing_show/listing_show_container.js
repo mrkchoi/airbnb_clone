@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import ListingShow from './listing_show';
 import { fetchListing } from '../../../actions/listing_actions';
 import { fetchReviewsByListingId } from '../../../actions/review_actions';
-import { fetchHost } from '../../../actions/user_actions';
+import { fetchHost } from "../../../actions/user_actions";
 
 const msp = (state, ownProps) => {
   let listingId = ownProps.match.params.listingId;

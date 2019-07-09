@@ -5,7 +5,7 @@ export const RECEIVE_REVIEWS_BY_LISTING_ID = "RECEIVE_REVIEWS_BY_LISTING_ID";
 const receiveReviewsByListingId = (reviews) => {
   return ({
     type: RECEIVE_REVIEWS_BY_LISTING_ID,
-    reviews: { reviews }
+    reviews: reviews
   })
 };
 

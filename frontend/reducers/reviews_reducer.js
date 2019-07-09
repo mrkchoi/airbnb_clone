@@ -11,7 +11,7 @@ const reviewsReducer = (oldState = defaultState, action) => {
     case RECEIVE_REVIEWS_BY_LISTING_ID:
       return action.reviews;
     default:
-      return defaultState;
+      return oldState;
   }
 };
 

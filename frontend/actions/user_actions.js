@@ -9,6 +9,7 @@ const receiveHost = (host) => {
 };
 
 export const fetchHost = hostId => dispatch => {
-  return UserApiUtil.fetchHost(hostId)
-    .then(host => dispatch(receiveHost(host[0])));
+  return UserApiUtil.fetchHost(hostId).then(host =>
+    dispatch(receiveHost(host[0]))
+  );
 };
