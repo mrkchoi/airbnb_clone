@@ -7,16 +7,47 @@
   font-weight: 700;
   color: #484848;
   margin-top: 3.4rem !important;
-  margin-bottom: 2.4rem;
+  margin-bottom: 2.2rem;
 }
 
 .listingshow__photos-grid-outer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
+  grid-gap: 16px;
+  margin-bottom: 6rem;  
 }
 
 .listingshow__photo-single {
   width: 100%;
+}
+
+.listingshow__photos-extra-container {
+  background-color: #EBEBEB !important;
+  width: 100%;
+  padding: 6rem 12rem 6rem 5rem;
+  margin-bottom: 6rem;
+}
+
+.listingshow__photos-extra-inner {}
+.listingshow__photos-extra-logo {
+  background-image: image-url("logo/01_airbnb-plus-purple.png");
+  height: 45px;
+  width: 95px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 3rem;  
+}
+
+.listingshow__photos-extra-content {}
+
+.listingshow__photos-extra-header {
+  font-size: 1.6rem;
+  color: #484848;  
+}
+
+.listingshow__photos-extra-text {
+  font-size: 1.6rem;
+  color: #484848;
+  font-weight: 300;
+  max-width: 90%;
 }

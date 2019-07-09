@@ -29,6 +29,20 @@ class ListingShowPhotoOverview extends React.Component {
           })}
         </div>
 
+        <div className="listingshow__photos-extra-container">
+          <div className="listingshow__photos-extra-inner">
+            <div className="listingshow__photos-extra-logo"></div>
+            <div className="listingshow__photos-extra-content">
+              <h4 className="listingshow__photos-extra-header">
+                Exceptional hosts with an eye for detail
+              </h4>
+              <p className="listingshow__photos-extra-text">
+                Every Airbnb Plus host is well-reviewed because they’re welcoming and take care of all the essentials that create memorable stays.
+              </p>
+            </div>
+          </div>
+        </div>  
+
       </div>
     );
   }
