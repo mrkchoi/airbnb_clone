@@ -17,8 +17,17 @@
   margin-bottom: 6rem;  
 }
 
+.listingshow__photos-grid-item-wrapper {
+  overflow: hidden;
+  background-size: cover;
+  height: 200px;
+
+}
+
+
 .listingshow__photo-single {
   width: 100%;
+  opacity: 0;  
 }
 
 .listingshow__photos-extra-container {

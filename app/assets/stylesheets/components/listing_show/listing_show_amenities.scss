@@ -1,6 +1,6 @@
 
 .listingshow__amenities-container {
-  padding-bottom: 8rem;
+  padding-bottom: 6rem;
   border-bottom: 1px solid rgba(0,0,0,.08);  
 }
 
@@ -24,7 +24,6 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-gap: 16px;
-  margin-bottom: 6rem;  
 }
 
 .listingshow__amenities-grid-single {

@@ -1,0 +1,47 @@
+
+
+.listingshow__location-container {
+  padding-bottom: 6rem;  
+  border-bottom: 1px solid rgba(0,0,0,.08);    
+}
+
+.listingshow__location-content-wrapper {}
+
+.listingshow__location-header-wrapper {
+  margin-bottom: 4rem;  
+}
+
+.listingshow__location-header {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #484848;
+  margin-top: 6rem !important;
+  margin-bottom: 0.8rem;
+}
+
+.listingshow__location-location-subheader {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 3.6rem;
+  color: rgba(0,0,0,0.4);;    
+}
+
+.location_description-location-description {
+  width: 50%;
+  line-height: 2rem;
+  color: #484848;
+  font-weight: 300;
+  font-size: 16px;  
+}
+
+.listingshow__location-map-outer {}
+.listingshow__location-map-text {
+  color: #484848;
+  font-weight: 300;
+  font-size: 16px;    
+  margin-top: 1.6rem;  
+}
+
+div#map-container.show-map-container {
+  height: 480px;
+}
