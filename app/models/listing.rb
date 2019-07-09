@@ -36,6 +36,7 @@ class Listing < ApplicationRecord
   # validates :title, :description, :num_guests, :type, :num_beds, :num_baths, :price, :self_check_in, :parking, :kitchen, :washer, :dryer, :dishwasher, :wifi, :tv, :bathroom_essentials, :bedroom_comforts, :coffee_maker, :hair_dryer, :location, :location_description, :lat, :long, :host_id, presence: true
 
   has_many_attached :photos
+  has_many_attached :thumbnails
   has_many :reviews,
     foreign_key: :listing_id,
     class_name: 'Review'

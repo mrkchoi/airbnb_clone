@@ -26,14 +26,15 @@ class ListingIndexItem extends React.Component {
       price,
       photoUrls,
       average_rating,
-      num_reviews
+      num_reviews,
+      thumbnailUrls
     } = this.props.listing;
 
     return (
       <div className="listingindexitem__main">
-        <div className="listingindexitem__carousel-wrapper">
+        <div className="listingindexitem__carousel-wrapper">          
           <Carousel width={"300px"} heightMode={"first"} wrapAround={true}>
-            {photoUrls.map((photo, idx) => {
+            {thumbnailUrls.map((photo, idx) => {
               if (idx < 4) {
                 return (
                   <img
