@@ -1,0 +1,120 @@
+
+.listingshow__amenities-container {
+  padding-bottom: 8rem;
+  border-bottom: 1px solid rgba(0,0,0,.08);  
+}
+
+.listingshow__amenities-header-container {
+  margin-bottom: 2.2rem;
+}
+
+.listingshow__amenities-header {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #484848;
+  margin-top: 3.4rem !important;
+  margin-bottom: 0.8rem;
+}
+.listingshow__amenities-header-text {
+  font-size: 16px;
+  font-weight: 200;  
+}
+
+.listingshow__amenities-grid-outer {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 16px;
+  margin-bottom: 6rem;  
+}
+
+.listingshow__amenities-grid-single {
+  background-color: #EBEBEB !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.listingshow__amenities-grid-img {
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  width: 100%;
+}
+
+.listingshow__amenities-grid-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+.listingshow__amenities-grid-content-text {
+  font-weight: 300;
+  font-size: 16px;
+  text-align: center;
+  padding: 1.2rem 1.2rem;
+}
+
+
+// .listingshow__amenities-grid-img--parking {
+//   background-image: image-url("amenities/01_parking.png");
+// }
+
+// .listingshow__amenities-grid-img--kitchen {
+//   background-image: image-url("amenities/03_kitchen.png");
+// }
+
+// .listingshow__amenities-grid-img--washer {
+//   background-image: image-url("amenities/04_washer.png");
+// }
+
+// .listingshow__amenities-grid-img--dryer {
+//   background-image: image-url("amenities/05_dryer.png");
+// }
+
+// .listingshow__amenities-grid-img--wifi {
+//   background-image: image-url("amenities/07_wifi.png");
+// }
+
+// .listingshow__amenities-grid-img--tv {
+//   background-image: image-url("amenities/08_tv.png");
+// }
+
+// .listingshow__amenities-grid-img--bathroom {
+//   background-image: image-url("amenities/09_bathroom-essentials.png");
+// }
+
+// .listingshow__amenities-grid-img--bedroom {
+//   background-image: image-url("amenities/10_bedroom-comforts.png");
+// }
+
+// .listingshow__amenities-grid-img--coffee {
+//   background-image: image-url("amenities/11_coffee-maker.png");
+// }
+
+// .listingshow__amenities-grid-img--hair {
+//   background-image: image-url("amenities/12_hair-dryer.png");
+// }
+
+// .listingshow__amenities-grid-img--dishwasher {
+//   background-image: image-url("amenities/06_dishwasher.png");
+// }
+
+// .listingshow__amenities-grid-img--selfcheckin {
+//   background-image: image-url("amenities/02_self-check-in.png");
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
