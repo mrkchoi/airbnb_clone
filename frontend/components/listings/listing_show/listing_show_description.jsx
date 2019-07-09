@@ -29,7 +29,7 @@ class ListingShowDescription extends React.Component {
             {listing.description}
           </div>
         </div>
-        <div className="listingshow__desc-content">
+        <div className="listingshow__desc-host">
           <div className="listingshow__desc-host-img" />
           <div className="listingshow__desc-host-review-outer">
             <p className="listingshow__desc-host-review-text">

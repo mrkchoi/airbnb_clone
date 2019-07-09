@@ -2,6 +2,12 @@ json.extract! listing, :id, :title, :description, :num_guests, :num_rooms, :num_
 json.average_rating listing.average_rating
 json.num_reviews listing.num_reviews
 
+review_ids = []
+listing.reviews.each do |review|
+  review_ids << review.id
+end
+
+json.reviewIds review_ids
 if listing.photos.attached?
   json.photoUrls listing.photos.map {|file| url_for(file)}
 end
