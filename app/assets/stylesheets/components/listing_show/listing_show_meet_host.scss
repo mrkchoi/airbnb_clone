@@ -25,6 +25,7 @@
 
 .listingshow__meethost-photo-wrapper {
   margin-right: 4rem;  
+  max-width: 225px;  
 }
 
 .listingshow__meethost-photo {
@@ -33,6 +34,21 @@
   height: 225px;
   background-position: center;
   border-radius: 3px;  
+}
+
+.listingshow__meethost-flair {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.08)  
+}
+.listingshow__meethost-flair-text {
+  font-family: 'Caveat';
+  text-align: center;  
+  line-height: 2.5rem;
+  font-size: 32px;
+  font-weight: 100;
+  color: rgba(0,0,0,0.6);  
 }
 
 .listingshow__meethost-bio-inner {}

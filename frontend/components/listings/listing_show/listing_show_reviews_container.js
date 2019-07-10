@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import ListingShowReviews from './listing_show_reviews';
+import { openModal } from '../../../actions/modal_actions';
 
 const msp = (state, ownProps) => {
   return ({
@@ -10,8 +11,8 @@ const msp = (state, ownProps) => {
 
 const mdp = dispatch => {
   return ({
-    // fetchReview: reviewId => dispatch(fetchReview(reviewId))
+    openModal: type => dispatch(openModal(type))
   });
 }
 
-export default connect(msp, null)(ListingShowReviews);
+export default connect(msp, mdp)(ListingShowReviews);

@@ -5,6 +5,7 @@ import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
 import NavbarDropdownContainer from '../navbar/dropdown/navbar_dropdown_container';
 import BookingFormContainer from '../../components/booking/booking_modal/booking_form_container'
+import ReviewsModalContainer from '../reviews/reviews_modal_container';
 
 const Modal = ({modal, closeModal}) => {
   if (!modal) return null;
@@ -22,6 +23,9 @@ const Modal = ({modal, closeModal}) => {
       break;
     case 'booking':
       component = <BookingFormContainer />;
+      break;
+    case 'reviews':
+      component = <ReviewsModalContainer />;
       break;
     default:
       return null;
@@ -45,6 +49,17 @@ const Modal = ({modal, closeModal}) => {
         onClick={closeModal}
       >
         <div className="modal__child modal__child--booking" onClick={e => e.stopPropagation()}>
+          {component}
+        </div>
+      </div>
+    );
+  } else if (modal === 'reviews') {
+    return (
+      <div
+        className="modal__background modal__background--reviews"
+        onClick={closeModal}
+      >
+        <div className="modal__child modal__child--reviews" onClick={e => e.stopPropagation()}>
           {component}
         </div>
       </div>

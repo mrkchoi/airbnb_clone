@@ -18,6 +18,11 @@ class ListingShowMeetHost extends React.Component {
           <div className="listingshow__meethost-bio-wrapper">
             <div className="listingshow__meethost-photo-wrapper">
               <div className="listingshow__meethost-photo" style={{ backgroundImage: `url(${host.photoUrl})`}}></div>
+              <div className="listingshow__meethost-flair">
+                <h4 className="listingshow__meethost-flair-text">
+                  {host.firstname}
+                </h4>
+              </div>
             </div>
             <div className="listingshow__meethost-bio-inner">
               <h4 className="listingshow__meethost-bold">

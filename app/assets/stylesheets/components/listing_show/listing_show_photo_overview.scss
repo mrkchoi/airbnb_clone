@@ -31,9 +31,12 @@
 }
 
 .listingshow__photos-extra-container {
-  background-color: #EBEBEB !important;
+  // background-color: #EBEBEB !important;
+  background-image: image-url("background/show/01-airbnb-plus-bg.jpg");
+  background-size: cover;
+  background-position: center;
   width: 100%;
-  padding: 6rem 12rem 6rem 5rem;
+  padding: 8rem 12rem 8rem 5rem;
   margin-bottom: 6rem;
 }
 
@@ -58,5 +61,5 @@
   font-size: 1.6rem;
   color: #484848;
   font-weight: 300;
-  max-width: 90%;
+  max-width: 50%;
 }

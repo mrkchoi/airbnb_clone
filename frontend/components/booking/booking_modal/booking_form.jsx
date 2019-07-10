@@ -22,6 +22,18 @@ class BookingForm extends React.Component {
     }
   }
 
+  handleSumbit(e) {
+    e.preventDefault();
+
+    // clearBooking Errors
+    // If not logged in, scroll to top & oepen login modal
+    // Pass bookingParams from state in correct shape to slice of redux state for booking action
+    // Redirect to booking confirmation page and pull booking info from redux state
+    // On submit, send bookingParams to createBooking action to push to DB
+    // Then, redirect user to trips/profile page
+    
+  }
+
   render() {
     let { listing } = this.props;
 

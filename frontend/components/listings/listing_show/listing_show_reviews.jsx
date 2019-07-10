@@ -2,6 +2,17 @@ import React from "react";
 import ListingShowReviewSingle from './listing_show_review_single';
 
 class ListingShowReviews extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(e) {
+    e.preventDefault();
+    this.props.openModal('reviews');
+  }
+  
   render() {
     let { reviews, listing } = this.props;
 
@@ -65,7 +76,7 @@ class ListingShowReviews extends React.Component {
         </h3>
         {listingPreview}
 
-        <a href="#" className="listingshow__reviews-btn">Read all {listing.num_reviews} reviews</a>
+        <a href="#" className="listingshow__reviews-btn" onClick={this.handleClick}>Read all {listing.num_reviews} reviews</a>
 
       </div>
     ); 
