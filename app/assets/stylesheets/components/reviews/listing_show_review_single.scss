@@ -1,0 +1,34 @@
+
+.listingshow__review-single-container {
+  width: 45%;
+}
+
+.listingshow__review-single-profile {
+  display: flex;
+  align-items: center;  
+  margin-bottom: 2rem;  
+}
+
+.listingshow__review-single-photo {
+  background-size: cover;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.listingshow__review-single-userinfo {}
+
+.listingshow__review-single-name {
+  margin-bottom: 0;
+  margin-left: 1rem;  
+}
+
+.listingshow__review-single-date {}
+
+.listingshow__review-single-review {}
+
+.listingshow__review-single-text {
+  max-width: 660px;  
+  font-size: 16px;
+  font-weight: 300;
+}

@@ -1,0 +1,31 @@
+.listingshow__rules-container {
+
+}
+
+.listingshow__rules-item-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9rem 0px;
+  border-bottom: 1px solid rgba(0,0,0,.08);  
+}
+
+.listingshow__rules-title {
+  width: 45%;
+}
+
+.listingshow__rules-header {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #484848;
+  margin-bottom: 3.2rem;
+}
+
+.listingshow__rules-details {
+  flex: 1;
+}
+
+.listingshow__rules-detail-text {
+  font-weight: 300;
+  font-size: 16px;
+}

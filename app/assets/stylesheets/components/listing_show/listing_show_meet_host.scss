@@ -1,0 +1,64 @@
+
+.listingshow__meethost-container {
+  padding-bottom: 6rem;
+  border-bottom: 1px solid rgba(0,0,0,.08);
+}
+
+.listingshow__meethost-header {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #484848;
+  margin-top: 3.4rem !important;
+  margin-bottom: 3.2rem;
+}
+
+.listingshow__meethost-main {
+  display: flex;
+  justify-content: flex-start;  
+}
+
+.listingshow__meethost-bio-wrapper {
+  display: flex;
+  align-items: flex-start;  
+  margin-right: 20%;  
+}
+
+.listingshow__meethost-photo-wrapper {
+  margin-right: 4rem;  
+}
+
+.listingshow__meethost-photo {
+  background-size: cover;
+  width: 225px;
+  height: 225px;
+  background-position: center;
+  border-radius: 3px;  
+}
+
+.listingshow__meethost-bio-inner {}
+
+.listingshow__meethost-bold {}
+
+.listingshow__meethost-text {
+  font-size: 16px;
+  font-weight: 200;
+  max-width: 460px;
+  line-height: 28px;
+}
+
+.listingshow__meethost-stats-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+}
+
+.listingshow__meethost-stat {
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 0.5rem;  
+}
+
+
+
+
+

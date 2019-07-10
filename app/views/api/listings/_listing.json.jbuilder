@@ -3,9 +3,9 @@ json.extract! listing, :id, :title, :description, :num_guests, :num_rooms, :num_
 json.average_rating listing.average_rating
 json.num_reviews listing.num_reviews
 
-review_ids = []
-listing.reviews.each { |review| review_ids << review.id}
-json.reviewIds review_ids
+# review_ids = []
+# listing.reviews.each { |review| review_ids << review.id}
+# json.reviewIds review_ids
 
 if listing.photos.attached?
   json.photoUrls listing.photos.map {|file| url_for(file)}
@@ -13,4 +13,20 @@ end
 
 if listing.thumbnails.attached?
   json.thumbnailUrls listing.thumbnails.map {|file| url_for(file)}
+end
+
+if listing.reviews
+  json.reviews listing.reviews
+end
+
+if listing.reviewers
+  reviewers = []
+  listing.reviewers.each do |reviewer|
+    if reviewer.photo.attached?
+
+    end
+    reviewers << reviewer
+  end
+  json.reviewers reviewers
+  
 end

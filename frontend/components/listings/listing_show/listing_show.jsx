@@ -8,8 +8,9 @@ import ListingShowDescription from './listing_show_description';
 import ListingShowPhotoOverview from './listing_show_photo_overview';
 import ListingShowAmenities from './listing_show_amenities';
 import ListingShowLocation from './listing_show_location';
-import ListingShowReviews from './listing_show_reviews';
+import ListingShowReviewsContainer from './listing_show_reviews_container';
 import ListingShowMeetHost from './listing_show_meet_host';
+import ListingShowRulesPolicy from './listing_show_rules_policy';
 import ListingShowFooter from './listing_show_footer';
 
 
@@ -82,6 +83,8 @@ class ListingShow extends React.Component {
     let { listing, currentUser, users, reviews } = this.props;
     let host = users[listing.host_id];
 
+    // debugger
+
     return (
       <div className="listingshow__container-main">
         <Header type={"header__listing header__listing-show"} currentUser={currentUser} />        
@@ -94,9 +97,10 @@ class ListingShow extends React.Component {
           <ListingShowPhotoOverview listing={listing}/>
           <ListingShowAmenities listing={listing}/>
           <ListingShowLocation listing={listing}/>
-          <ListingShowReviews listing={listing} reviews={reviews}/>
+          <ListingShowReviewsContainer listing={listing} reviews={reviews}/>
           <ListingShowMeetHost listing={listing} host={host}/>
-          <ListingShowFooter/>
+          <ListingShowRulesPolicy />
+          <ListingShowFooter />
         </div>
       </div>
     );

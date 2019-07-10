@@ -1,6 +1,6 @@
 class Api::ListingsController < ApplicationController
   def index    
-    @listings = bounds ? Listing.in_bounds(bounds).with_attached_thumbnails.with_attached_photos : Listing.all.with_attached_thumbnails.with_attached_photos
+    @listings = bounds ? Listing.in_bounds(bounds).with_attached_thumbnails.with_attached_photos.includes(:reviews) : Listing.all.with_attached_thumbnails.with_attached_photos.includes(:reviews)
     
     if @listings
       render :index  
@@ -10,7 +10,7 @@ class Api::ListingsController < ApplicationController
   end
 
   def show
-    @listing = Listing.with_attached_thumbnails.with_attached_photos.find_by(id: params[:id])
+    @listing = Listing.with_attached_thumbnails.with_attached_photos.includes(:reviews).includes(:reviewers).find_by(id: params[:id])
 
     if @listing
       render :show
