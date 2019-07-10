@@ -4,6 +4,7 @@ import 'normalize.css';
 
 import Root from './components/root';
 
+import { fetchAllBookings } from './util/booking_api_util';
 import { fetchHost } from "./actions/user_actions";
 import { fetchReviews, fetchReviewsByListingId } from "./util/review_api_util";
 import { signUp, logIn, logOut } from './actions/session_actions';
@@ -37,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.logIn = logIn;
   window.logOut = logOut;
   window.fetchListings = fetchListings;
+  window.fetchAllBookings = fetchAllBookings;
 
   window.fetchReviews = fetchReviews;
   window.fetchReviewsByListingId = fetchReviewsByListingId;

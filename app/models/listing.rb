@@ -46,6 +46,9 @@ class Listing < ApplicationRecord
   has_many :reviewers,
     through: :reviews,
     source: :user
+  has_many :bookings,
+    foreign_key: :listing_id,
+    class_name: 'Booking'
 
   def self.in_bounds(bounds)
     bounds = JSON.parse(bounds)

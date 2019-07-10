@@ -23,6 +23,9 @@ class User < ApplicationRecord
   has_many :reviews,
     foreign_key: :user_id,
     class_name: 'Review'
+  has_many :bookings,
+    foreign_key: :user_id,
+    class_name: 'Booking'
 
   attr_reader :password
   before_validation :ensure_session_token

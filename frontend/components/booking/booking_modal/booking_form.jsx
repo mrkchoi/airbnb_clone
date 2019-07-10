@@ -6,6 +6,22 @@ import DefaultTheme from 'react-dates/lib/theme/DefaultTheme';
 
 ThemedStyleSheet.registerInterface(aphroditeInterface);
 ThemedStyleSheet.registerTheme(DefaultTheme);
+// ThemedStyleSheet.registerTheme({
+//   reactDates: {
+//     ...DefaultTheme.reactDates,
+//     color: {
+//       ...DefaultTheme.reactDates.color,
+//       highlighted: {
+//         // backgroundColor: '#82E0AA',
+//         backgroundColor_active: '#914669',
+//         backgroundColor_hover: '#914669',
+//         color: '#914669',
+//         color_active: '#914669',
+//         color_hover: '#914669',
+//       },
+//     },
+//   },
+// });
 
 import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
 
@@ -57,7 +73,7 @@ class BookingForm extends React.Component {
     
     let numGuestsInput = (
       <select className="bookingmodal__form-guest-input">
-        {numGuestsArr.map(num => <option value={num}>{num}</option> )}
+        {numGuestsArr.map((num, idx) => <option value={num} key={idx}>{num}</option> )}
       </select>
     );
 

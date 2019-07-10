@@ -104,3 +104,43 @@
   font-size: 12px;
   color: #484848;  
 }
+
+
+// background-color: #914669;
+
+input#booking-form-endDate:focus {
+  border-bottom: 2px solid #914669 !important;
+}
+
+input#booking-form-startDate:focus {
+  border-bottom: 2px solid #914669 !important;
+}
+
+button.DayPickerKeyboardShortcuts_buttonReset_4i742g-o_O-DayPickerKeyboardShortcuts_show_182wv2l-o_O-DayPickerKeyboardShortcuts_show__bottomRight_1k73zfz {
+  display: none;
+}
+
+// .CalendarDay__selected_span {
+//   background: #914669; //background
+//   color: white; //text
+//   border: 1px solid #914669; //default styles include a border
+// }
+
+// // Will edit selected date or the endpoints of a range of dates
+// .CalendarDay__selected {
+//   background: #914669;
+//   color: white;
+// }
+
+// // Will edit when hovered over. _span style also has this property
+// .CalendarDay__selected:hover {
+//   background: orange;
+//   color: white;
+// }
+
+// // Will edit when the second date (end date) in a range of dates
+// // is not yet selected. Edits the dates between your mouse and said date
+// .CalendarDay__hovered_span:hover,
+// .CalendarDay__hovered_span {
+//   background: brown;
+// }
