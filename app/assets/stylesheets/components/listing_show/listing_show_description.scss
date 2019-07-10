@@ -6,6 +6,7 @@
   border-bottom: 1px solid rgba(0,0,0,0.08);
 }
 .listingshow__desc-content-wrapper {}
+
 .listingshow__desc-flair {
   display: flex;
   justify-content: flex-start;
@@ -25,11 +26,21 @@
   max-width: 800px;  
 }
 .listingshow__desc-host {
-  width: 33.33%;
-  margin-left: 8rem;
-  max-width: 500px;
+  max-width: 33.33%;
+  display: flex;
 }
-.listingshow__desc-host-img {}
+
+.listingshow__desc-host-img-wrapper {
+  margin-right: 1.2rem;  
+}
+
+.listingshow__desc-host-img {
+  background-size: cover;
+  width: 85px;
+  height: 85px;
+  background-position: center;
+  border-radius: 50%;
+}
 .listingshow__desc-host-review-outer {}
 
 .listingshow__desc-host-review-text {

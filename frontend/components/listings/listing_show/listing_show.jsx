@@ -2,7 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import PulseLoaderAnim from '../../loaders/pulse_loader';
 import Header from '../../navbar/header';
-import ListingShowInfoOverlay from './listing_show_info_overlay';
+import ListingShowInfoOverlayContainer from './listing_show_info_overlay_container';
 import ListingShowHero from './listing_show_hero';
 import ListingShowDescription from './listing_show_description';
 import ListingShowPhotoOverview from './listing_show_photo_overview';
@@ -89,7 +89,7 @@ class ListingShow extends React.Component {
       <div className="listingshow__container-main">
         <Header type={"header__listing header__listing-show"} currentUser={currentUser} />        
 
-        <ListingShowInfoOverlay listing={listing}/>
+        <ListingShowInfoOverlayContainer listing={listing}/>
         <ListingShowHero listing={listing}/>
 
         <div className="listingshow__content-wrapper">
