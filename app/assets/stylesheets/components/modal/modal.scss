@@ -33,7 +33,19 @@
   box-shadow: 0px 3px 4px rgba(0,0,0, 0.2) !important;
 }
 
+// Booking modal
+.modal__background--booking {
+  background: rgba(255, 255, 255, 0.5);
+}
 
+.modal__child--booking {
+  background-color: white;
+  width: 280px;
+  box-shadow: 0px 3px 4px rgba(0,0,0, 0.2) !important;
+}
+
+
+  
 
 // Modal divider
 

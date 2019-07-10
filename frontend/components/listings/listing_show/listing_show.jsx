@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import PulseLoaderAnim from '../../loaders/pulse_loader';
+import Modal from '../../modal/modal';
 import Header from '../../navbar/header';
 import ListingShowInfoOverlayContainer from './listing_show_info_overlay_container';
 import ListingShowHero from './listing_show_hero';
@@ -12,7 +13,6 @@ import ListingShowReviewsContainer from './listing_show_reviews_container';
 import ListingShowMeetHost from './listing_show_meet_host';
 import ListingShowRulesPolicy from './listing_show_rules_policy';
 import ListingShowFooter from './listing_show_footer';
-
 
 
 class ListingShow extends React.Component {
@@ -87,6 +87,7 @@ class ListingShow extends React.Component {
 
     return (
       <div className="listingshow__container-main">
+        <Modal />
         <Header type={"header__listing header__listing-show"} currentUser={currentUser} />        
 
         <ListingShowInfoOverlayContainer listing={listing}/>

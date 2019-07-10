@@ -2,7 +2,15 @@ import React from "react";
 import RenderStars from '../../stars/render_stars';
 
 class ListingShowInfoOverlay extends React.Component {
-  
+  constructor(props) {
+    super(props);
+    this.handleModalClick = this.handleModalClick.bind(this);
+  }
+
+  handleModalClick() {
+    this.props.openModal('booking');
+  }
+
   render() {
     let { listing } = this.props;
 
@@ -27,7 +35,7 @@ class ListingShowInfoOverlay extends React.Component {
             ${listing.price} <span>/ night</span>
           </div>
           <div className="listingshow__overlay-availability-btn-outer">
-            <button className="listingshow__overlay-availability-btn">
+            <button className="listingshow__overlay-availability-btn" onClick={this.handleModalClick}>
               Check availability
             </button>
           </div>
