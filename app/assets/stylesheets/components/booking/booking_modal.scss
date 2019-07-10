@@ -1,0 +1,106 @@
+.modal__child--booking {
+  background-color: white;
+  width: auto !important;
+}
+
+.bookingmodal__container {
+  padding: 4.2rem 2rem 2rem 2rem;
+}
+
+.modal__btn-close.bookingmodal__btn-close {
+  left: 1.4rem;
+  right: initial;
+  border-radius: none;
+  box-shadow: none;
+}
+
+.modal__btn-close.bookingmodal__btn-close i {
+  color: rgba(0,0,0,.3);
+}
+
+.bookingmodal__pricingreviews {
+  margin-top: 1.2rem;  
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding-bottom: 1rem;  
+}
+
+.bookingmodal__pricing-header {
+  color: #484848;
+  margin-bottom: 0;  
+}
+
+.bookingmodal__reviews {
+  display: flex;
+  // border-bottom: 1px solid rgba(0,0,0,.08);
+}
+
+.bookingmodal__reviews .starrating__container {
+  color: rgb(145, 70, 105);
+  font-size: 9px;  
+}
+
+.bookingmodal__reviews-count {
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: 3px;
+  color: #484848;
+}
+
+
+.bookingmodal__form-container {
+  padding-top: 1rem;
+}
+
+.bookingmodal__form {}
+.bookingmodal__form-dates-container {}
+.bookingmodal__form-dates-header {}
+.bookingmodal__form-label {
+  font-size: 12px;
+  color: #484848;
+  margin-bottom: 3px;
+}
+
+.bookingmodal__form-calendar {
+  margin-bottom: 1rem;
+}
+
+.bookingmodal__form-guests-container {
+  margin-bottom: 1.6rem;
+}
+
+.bookingmodal__form-guests-header {}
+
+.bookingmodal__form-guest-input {
+  width: 100%;
+  padding: 0.6rem;
+  color: #484848 !important;
+  border-radius: 3px;
+  outline: none;
+  border: 1px solid rgba(0,0,0,0.1);  
+  font-size: 18px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 10px 10px;
+  background-color: #fff;
+}
+
+.bookingmodal__form-cta-container {}
+
+.bookingmodal__form-btn {
+  background-color: #914669;
+  padding: 1rem 1.8rem;
+  width: 100%;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  transition: all 75ms ease-in;  
+  margin-bottom: .6rem;  
+}
+.bookingmodal__form-cta-text {
+  text-align: center;
+  font-size: 12px;
+  color: #484848;  
+}

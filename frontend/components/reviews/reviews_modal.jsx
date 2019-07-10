@@ -8,6 +8,7 @@ class ReviewsModal extends React.Component {
   }
 
   handleClick(e) {
+    e.preventDefault();
     this.props.closeModal();
   }
   
@@ -15,9 +16,17 @@ class ReviewsModal extends React.Component {
     let { reviews } = this.props;
 
     return (
-      <div>ReviewsModal
-        {reviews.map((review, idx) => <ListingShowReviewSingle review={review} key={idx}/> )}
-        <button onClick={this.handleClick}>close</button>
+      <div className="listingshow__reviewmodal-container">
+        <a 
+          href="#"
+          className="listingshow__reviewmodal-btn-close modal__btn-close" 
+          onClick={this.handleClick}>
+            <i className="fas fa-times"></i>
+          </a>
+        <h3 className="listingshow__reviewmodal-header">
+          {reviews.length} Reviews
+        </h3>
+        {reviews.map((review, idx) => <ListingShowReviewSingle review={review} key={idx} className="listingshow__review-single-modal" /> )}
       </div>
     );
   }

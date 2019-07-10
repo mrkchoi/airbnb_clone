@@ -20,6 +20,8 @@ class BookingForm extends React.Component {
       loading: false,
       redirect: false 
     }
+
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleSumbit(e) {
@@ -34,6 +36,11 @@ class BookingForm extends React.Component {
     
   }
 
+  handleClick(e) {
+    e.preventDefault();
+    this.props.closeModal();
+  }
+
   render() {
     let { listing } = this.props;
 
@@ -41,25 +48,89 @@ class BookingForm extends React.Component {
       return null;
     }
 
+    // Calculate max number of guests for select/option dropdown
+    let numMaxGuests = listing.num_guests;
+    let numGuestsArr = [];
+    for (let i = 1; i <= numMaxGuests; i++) {
+      numGuestsArr.push(i);
+    }
+    
+    let numGuestsInput = (
+      <select className="bookingmodal__form-guest-input">
+        {numGuestsArr.map(num => <option value={num}>{num}</option> )}
+      </select>
+    );
+
+  
+
     return (
-      <div>
-        {listing.price}
-        {RenderStars(listing.average_rating)}
-        {listing.num_reviews}
-        <DateRangePicker
-          startDatePlaceholderText="Check In"
-          endDatePlaceholderText="Check Out"
-          startDateId="booking-form-startDate"
-          endDateId="booking-form-endDate"
-          startDate={this.state.startDate}
-          endDate={this.state.endDate}
-          onDatesChange={({ startDate, endDate }) => this.setState({ startDate: startDate, endDate: endDate })}
-          focusedInput={this.state.focusedInput}
-          onFocusChange={focusedInput => this.setState({ focusedInput })}
-          // isDayBlocked={date => this.isAlreadyBooked(date)}
-          showClearDates={true}
-          regular={true}
-        />
+      <div className="bookingmodal__container">
+        <a
+          href="#"
+          className="bookingmodal__btn-close modal__btn-close"
+          onClick={this.handleClick} >
+          <i className="fas fa-times"></i>
+        </a>
+        <div className="bookingmodal__pricingreviews">
+          <h4 className="bookingmodal__pricing-header">
+            ${listing.price} / night
+          </h4>
+          <div className="bookingmodal__reviews">
+            {RenderStars(listing.average_rating)}
+            <div className="bookingmodal__reviews-count">
+              {listing.num_reviews}
+            </div>
+          </div>
+        </div>
+        
+        <div className="bookingmodal__form-container">
+          <form className="bookingmodal__form">
+            <div className="bookingmodal__form-dates-container">
+              <h5 className="bookingmodal__form-dates-header bookingmodal__form-label">
+                Dates
+              </h5>
+              <div className="bookingmodal__form-calendar">
+                <DateRangePicker
+                  startDatePlaceholderText="Check In"
+                  endDatePlaceholderText="Check Out"
+                  startDateId="booking-form-startDate"
+                  endDateId="booking-form-endDate"
+                  startDate={this.state.startDate}
+                  endDate={this.state.endDate}
+                  onDatesChange={({ startDate, endDate }) => this.setState({ startDate: startDate, endDate: endDate })}
+                  focusedInput={this.state.focusedInput}
+                  onFocusChange={focusedInput => this.setState({ focusedInput })}
+                  // isDayBlocked={date => this.isAlreadyBooked(date)}
+                  showClearDates={true}
+                  regular={true}
+                  numberOfMonths={1}
+                />
+
+              </div>
+
+            </div>
+
+            <div className="bookingmodal__form-guests-container">
+              <h5 className="bookingmodal__form-label bookingmodal__form-guests-header">Guests</h5>
+              {/* <input 
+                type="number"
+                className="bookingmodal__form-guest-input"
+                defaultValue="1"
+                min="1"
+                max={listing.num_guests} /> */}
+
+              {numGuestsInput}
+            </div>
+            
+            <div className="bookingmodal__form-cta-container">
+              <input type="submit" className="bookingmodal__form-btn" value="Request to Book" />
+              <p className="bookingmodal__form-cta-text">You won't be charged yet</p>
+            </div>
+          </form>
+        </div>
+
+
+
       </div>
     )
   }

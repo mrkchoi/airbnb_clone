@@ -51,13 +51,13 @@
 
 .modal__child--reviews {
   background-color: white;
-  width: 280px;
+  // width: 280px;
   box-shadow: 0px 3px 4px rgba(0,0,0, 0.2) !important;
+  height: 95%;
+  overflow: auto;  
 }
 
-
   
-
 // Modal divider
 
 .modal__divider-container {

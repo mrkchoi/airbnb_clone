@@ -1,0 +1,67 @@
+.listingshow__reviewmodal-container {
+  padding: 2.2rem;
+  height: 90%;
+  overflow: auto;
+}  
+
+.modal__btn-close.listingshow__reviewmodal-btn-close {
+  top: 1.8rem;
+  left: 2rem;
+  right: initial;
+  height: 35px;
+  width: 35px;
+  border-radius: none;
+  box-shadow: none;
+}
+
+.modal__btn-close.listingshow__reviewmodal-btn-close i {
+  color: rgba(0,0,0,0.3);  
+}
+
+.listingshow__reviewmodal-header {
+  font-size: 24px;
+  color: #484848;
+  margin-bottom: 0;  
+  margin-top: 3.6rem;
+}
+
+.listingshow__review-single-modal {}
+
+
+
+// Base modal styling
+.modal__child--reviews .listingshow__review-single-container {
+  width: 100%;
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba(0,0,0,.08);  
+}
+
+.modal__child--reviews .listingshow__review-single-profile {
+  display: flex;
+  align-items: center;  
+  margin-bottom: 1.2rem;  
+}
+
+.modal__child--reviews .listingshow__review-single-photo {
+  background-size: cover;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.modal__child--reviews .listingshow__review-single-userinfo {}
+
+.modal__child--reviews .listingshow__review-single-name {
+  margin-bottom: 0;
+  margin-left: 1rem;  
+}
+
+.modal__child--reviews .listingshow__review-single-date {}
+
+.modal__child--reviews .listingshow__review-single-review {}
+
+.modal__child--reviews .listingshow__review-single-text {
+  max-width: 660px;  
+  font-size: 16px;
+  font-weight: 300;
+}
