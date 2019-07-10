@@ -1,3 +1,5 @@
-json.array! @bookings do |booking|
-  json.partial! 'booking', booking: booking
+@bookings.each do |booking|
+  json.set! booking.id do 
+    json.partial! 'booking', booking: booking
+  end
 end

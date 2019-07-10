@@ -46,7 +46,7 @@ const removeBookingByBookingId = booking => {
 
 // Thunk action creators
 export const fetchAllBookings = () => dispatch => {
-  return BookingApiUtil.fetchAllBookings
+  return BookingApiUtil.fetchAllBookings()
     .then(bookings => dispatch(receiveAllBookings(bookings)));
 }
 

@@ -4,7 +4,7 @@ import 'normalize.css';
 
 import Root from './components/root';
 
-import { fetchAllBookings } from './util/booking_api_util';
+import { fetchAllBookings } from './actions/booking_actions';
 import { fetchHost } from "./actions/user_actions";
 import { fetchReviews, fetchReviewsByListingId } from "./util/review_api_util";
 import { signUp, logIn, logOut } from './actions/session_actions';
