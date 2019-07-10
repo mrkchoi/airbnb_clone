@@ -31,11 +31,13 @@ class ListingShow extends React.Component {
   }
   
   componentDidMount() {
+    window.scrollTo(0, 0);
     let listingId = this.props.match.params.listingId;
     this.props.fetchListing(listingId)
       .then(action => this.props.fetchHost(action.listing.host_id));
     this.props.fetchReviews(listingId);
   }
+  
 
   // componentDidUpdate(prevProps, prevState) {
   //   // if (this.props.listing) {
