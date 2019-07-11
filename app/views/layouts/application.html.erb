@@ -8,8 +8,7 @@
     
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{google_api_key}&libraries=places" %>
 
-
-    <link rel="shortcut icon" href="images/favicon/airbnb_logotype_favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="<%= image_url('favicon/airbnb_logotype_favicon.ico') %>" type="image/x-icon">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
