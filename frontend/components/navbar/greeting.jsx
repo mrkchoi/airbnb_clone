@@ -19,8 +19,9 @@ class Greeting extends React.Component {
 
   render() {
     let { currentUser } = this.props;
+    let profilePic;
     if (currentUser.photoUrl) {
-      userPhoto = (
+      profilePic = (
         <img
           className="header__navbar-profile-photo" 
           src={currentUser.photoUrl}
@@ -28,7 +29,7 @@ class Greeting extends React.Component {
         />
       );
     } else {
-      userPhoto = (
+      profilePic = (
         <img
           className="header__navbar-profile-photo"
           src={userPhoto}
@@ -50,7 +51,7 @@ class Greeting extends React.Component {
             onClick={() => this.handleOpenModal("profile")}
           >
             <div className="header__navbar-profile-photo-container">
-              {userPhoto}
+              {profilePic}
             </div>
           </button>
           {/* <a
