@@ -324,17 +324,6 @@ ActiveRecord::Base.transaction do
     password: 'password'
   )
 
-  User.create(
-    firstname: 'Selam',
-    username: 'swelduu',
-    email: Faker::Internet.free_email,
-    bio: "Hi, I'm Selam! I am a software engineer with an insatiable curiosity to learn new technologies and apply capabilities to solve problems.",
-    joined_date: '2019-01-02',
-    password: 'password'
-  )
-
-
-
 
   ###################################
   # User Photos
