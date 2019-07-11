@@ -14,12 +14,12 @@ amazon_dev:
   region: <%= Rails.application.credentials.aws[:region] %>
   bucket: <%= Rails.application.credentials.aws[:dev][:bucket] %>
 
-amazon_prod:
+amazon_pro:
   service: S3
   access_key_id: <%= Rails.application.credentials.aws[:access_key_id] %>
   secret_access_key: <%= Rails.application.credentials.aws[:secret_access_key] %>
   region: <%= Rails.application.credentials.aws[:region] %>
-  bucket: <%= Rails.application.credentials.aws[:prod][:bucket] %>
+  bucket: <%= Rails.application.credentials.aws[:pro][:bucket] %>
 
 # Remember not to checkin your GCS keyfile to a repository
 # google:

@@ -48,28 +48,42 @@ class SessionForm extends React.Component {
     // }
 
     let pw = 'password';
+    let un = 'guestuser';
 
     // update state inside of helper function until 
       // demo password.length == 0
 
     const loginCallback = () => {
      setTimeout(() => {
+        if (un.length > 0) {
+          this.setState({
+            username: this.state.username.concat(un[0]),
+            password: this.state.password
+          });
+          un = un.slice(1);
+          loginCallback();
+        } else {
+          pwCallback();
+        }
+      }, 75);
+    }
+
+    const pwCallback = () => {
+     setTimeout(() => {
         if (pw.length > 0) {
           this.setState({
-            username: 'guestuser',
+            username: this.state.username,
             password: this.state.password.concat(pw[0])
           });
           pw = pw.slice(1);
-          loginCallback();
+          pwCallback()
         } else {
-          // submit form using updated state
           setTimeout(() => {
             this.props.processDemoForm(this.state)
               .then(this.props.closeModal);
           }, 500);
         }
-
-      }, 125);
+      }, 75);
     }
     // closemodal + clear session errors
     this.props.clearErrors();

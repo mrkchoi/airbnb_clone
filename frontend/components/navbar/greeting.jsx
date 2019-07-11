@@ -20,7 +20,7 @@ class Greeting extends React.Component {
   render() {
     let { currentUser } = this.props;
     let profilePic;
-    if (currentUser.photoUrl) {
+    if (currentUser && currentUser.photoUrl) {
       profilePic = (
         <img
           className="header__navbar-profile-photo" 
