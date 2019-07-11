@@ -64,11 +64,9 @@ class BookingForm extends React.Component {
     this.props.receiveCheckoutInfo(bookingParams);
     this.props.closeModal();
     this.props.history.push(`/checkout/${this.props.listing.id}`);
-    // debugger
     // Redirect to booking confirmation page and pull booking info from redux state
     // On submit, send bookingParams to createBooking action to push to DB
     // Then, redirect user to trips/profile page
-    // debugger
     
   }
 

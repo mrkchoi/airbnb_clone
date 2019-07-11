@@ -6,6 +6,12 @@ export const fetchListings = (filters) => {
   });
 }
 
+export const fetchListingsByUserId = userId => {
+  return $.ajax({
+    method: 'GET',
+    url: `/api/listings?user_id=${userId}`
+  })
+}
 export const fetchListing = id => {
   return $.ajax({
     method: 'GET',

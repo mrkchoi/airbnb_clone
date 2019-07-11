@@ -17,6 +17,7 @@
     "react-dates": "^20.2.5",
     "react-dom": "^16.8.6",
     "react-medium-image-zoom": "^3.1.1",
+    "react-moment": "^0.9.2",
     "react-redux": "^7.1.0",
     "react-router-dom": "^5.0.1",
     "react-spinners": "^0.5.7",

@@ -1,6 +1,8 @@
 class Api::BookingsController < ApplicationController
   def index
-    @bookings = Booking.all.includes(:user).includes(:listing)
+    @bookings = Booking.includes(:listing)
+                  .where(user_id: current_user.id)
+                  .order(start_date: :asc)
     render :index
   end
 

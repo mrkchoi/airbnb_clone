@@ -23,8 +23,8 @@ const ListingShowRulesPolicy = props => {
         </div>
         <div className="listingshow__rules-details">
           <p className="listingshow__rules-detail-text">
-            <span>Strict · Free cancellation for 48 hours</span><br />
-            After that, cancel before 5:00PM on your booking date and get a 50% refund, minus the service fee.
+            <span>Moderate · Free cancellation for 48 hours</span><br />
+            After that, cancel before 2:00PM on the day before your booking date and get a full refund, minus the service fee.
           </p>
         </div>
       </div>

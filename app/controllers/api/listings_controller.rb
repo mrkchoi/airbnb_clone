@@ -28,4 +28,8 @@ class Api::ListingsController < ApplicationController
   def bounds
     params[:bounds]
   end
+
+  def user_id
+    params[:user_id]
+  end
 end

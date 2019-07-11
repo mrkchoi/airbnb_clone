@@ -1,10 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 class NavbarDropdown extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.handleLogout = this.handleLogout.bind(this);
+    this.handleTripClick = this.handleTripClick.bind(this);
   }
 
   handleLogout() {
@@ -12,13 +13,22 @@ class NavbarDropdown extends React.Component {
     this.props.closeModal();
   }
 
+  handleTripClick(e) {
+    e.preventDefault();
+    this.props.history.push(`/trips/${this.props.currentUserId}`);
+  }
+
   render() {
     return (
       <div className="navbar__dropdown-container">
         <ul className="navbar__dropdown-list">
           <li className="navbar__dropdown-listitem">
-            <a href="#" className="navbar__dropdown-link">
-              Profile
+            <a
+              href="#"
+              className="navbar__dropdown-link"
+              onClick={this.handleTripClick}
+            >
+              Trips
             </a>
           </li>
           <li className="navbar__dropdown-listitem">
@@ -62,4 +72,4 @@ class NavbarDropdown extends React.Component {
   }
 }
 
-export default NavbarDropdown;
+export default withRouter(NavbarDropdown);

@@ -33,6 +33,11 @@ export const fetchListings = (filters) => dispatch => {
     .then(listings => dispatch(receiveAllListings(listings)));
 };
 
+export const fetchListingsByUserId = userId => dispatch => {
+  return ListingApiUtil.fetchListingsByUserId(userId)
+    .then(listings => dispatch(receiveAllListings(listings)));
+}
+
 export const fetchListing = id => dispatch => {
   return ListingApiUtil.fetchListing(id)
     .then(listing => dispatch(receiveListing(listing)));

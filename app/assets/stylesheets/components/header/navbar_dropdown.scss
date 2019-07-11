@@ -17,19 +17,20 @@
   display: inline-block;
   width: -webkit-fill-available;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  color: rgb(0, 132, 137);
+  color: #484848;
   margin: 0 1.1rem;
   cursor: pointer;
 }
 
 a.navbar__dropdown-link:visited {
-  color: rgb(0, 132, 137);
+  color: #484848;
 }
 
 .navbar__dropdown-link:hover {
   border-bottom: 1px solid rgba(0,0,0,.4);
+  color: #484848;
 }
 
 .navbar__dropdown-link--special {
-  color: rgb(0, 132, 137);
+  color: #484848;
 }

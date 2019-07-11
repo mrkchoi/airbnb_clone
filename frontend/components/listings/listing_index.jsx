@@ -10,7 +10,7 @@ class ListingIndex extends React.Component {
       loading: true
     };
 
-    setTimeout(() => this.setState({ loading: false }), 1000);
+    setTimeout(() => this.setState({ loading: false }), 2500);
   }
 
   componentDidMount() {
@@ -55,9 +55,9 @@ class ListingIndex extends React.Component {
     }
 
     // Loading Animation
-    if (this.state.loading || !listings) {
+    if (this.state.loading) {
       return (
-        <div className="listingindex__main">
+        <div className="listingindex__main loader__container">
           <PulseLoaderAnimation loading={this.state.loading} />
         </div>
       );

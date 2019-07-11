@@ -13,7 +13,6 @@ const bookingReducer = (oldState = {}, action) => {
 
   switch(action.type) {
     case RECEIVE_ALL_BOOKINGS:
-      debugger
       return action.bookings;
     case RECEIVE_BOOKINGS_BY_USER_ID:
       return action.bookings;

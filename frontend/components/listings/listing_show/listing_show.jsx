@@ -20,7 +20,7 @@ class ListingShow extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      loading: false
+      loading: true
     }
 
     setTimeout(() => {
@@ -39,16 +39,26 @@ class ListingShow extends React.Component {
   }
   
 
-  // componentDidUpdate(prevProps, prevState) {
-  //   // if (this.props.listing) {
-  //   //   this.props.fetchHost(this.props.listing.hostId);
-  //   // }
-  // }
+  componentDidUpdate(prevProps, prevState) {
+    // if (prevState !== state) {
+    //   let listingId = this.props.match.params.listingId;
+    //   this.props
+    //     .fetchListing(listingId)
+    //     .then(action =>
+    //       this.props.fetchHost(action.listing.host_id)
+    //     );
+    //   this.props.fetchReviews(listingId);
+    // }
+  }
   
   
   render() {
     if (this.state.loading || !this.props.listing || !this.props.reviews || !this.props.users) {
-      return <PulseLoaderAnim />
+      return (
+        <div className="loader__container">
+          <PulseLoaderAnim />
+        </div>
+      );
     }
 
     let {
