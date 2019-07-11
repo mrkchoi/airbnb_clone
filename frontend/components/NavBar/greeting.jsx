@@ -19,6 +19,25 @@ class Greeting extends React.Component {
 
   render() {
     let { currentUser } = this.props;
+    if (currentUser.photoUrl) {
+      userPhoto = (
+        <img
+          className="header__navbar-profile-photo" 
+          src={currentUser.photoUrl}
+          alt="profile photo"
+        />
+      );
+    } else {
+      userPhoto = (
+        <img
+          className="header__navbar-profile-photo"
+          src={userPhoto}
+          alt="profile photo"
+        />
+      );
+    }
+
+    
 
     if (currentUser) {
       return (
@@ -26,13 +45,12 @@ class Greeting extends React.Component {
           <p className="header__navbar-welcome-msg">
             Welcome back, {currentUser.username}!
           </p>
-          <button className="header__navbar-profile" onClick={() => this.handleOpenModal('profile')}>
+          <button
+            className="header__navbar-profile"
+            onClick={() => this.handleOpenModal("profile")}
+          >
             <div className="header__navbar-profile-photo-container">
-              <img
-                className="header__navbar-profile-photo" 
-                src={currentUser.photoUrl}
-                alt="profile photo"
-              />
+              {userPhoto}
             </div>
           </button>
           {/* <a

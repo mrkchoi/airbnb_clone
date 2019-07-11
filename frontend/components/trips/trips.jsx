@@ -65,13 +65,15 @@ class Trips extends React.Component {
         </div>
       );
 
+      // debugger
+
       trips = bookings.map((booking, idx) => (
         <div className="trips__item" key={idx}>
           <div className="trips__item-content">
             <div className="trips__item-main">
               <h3 className="checkout__nights-header trips__item-header">
-                <Moment format="LL">{booking.listing.start_date}</Moment> -
-                <Moment format="LL">{booking.listing.end_date}</Moment>
+                <Moment format="LL">{booking.start_date}</Moment> -
+                <Moment format="LL">{booking.end_date}</Moment>
               </h3>
               <h4 className="trips__item-subheader">
                 {booking.listing.location}
