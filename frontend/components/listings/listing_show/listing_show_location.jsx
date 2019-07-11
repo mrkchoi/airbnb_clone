@@ -13,23 +13,38 @@ class ListingShowLocation extends React.Component {
   }
   
   renderMap() {
-    let center = {
-      lat: this.props.listing.lat,
-      lng: this.props.listing.long,
-    }
+    let { lat, long } = this.props.listing;
+
     const mapOptions = {
-      center: center,
+      center: {
+        lat: lat,
+        lng: long
+      },
       zoom: 15,
       gestureHandling: 'none',
       zoomControl: false
     };
+    this.map = new google.maps.Map(this.mapNode, mapOptions);
+
+    this.marker = new google.maps.Circle({
+      center: {
+        lat: lat,
+        lng: long
+      },
+      radius: 150,
+      strokeColor: "#71cec9",
+      strokeOpacity: 0.8,
+      strokeWeight: 2,
+      fillColor: "#90ece4",
+      fillOpacity: 0.5,
+      map: this.map
+    });
 
     // const map = this.refs.map;
-    this.map = new google.maps.Map(this.mapNode, mapOptions);
-    this.MarkerManager = new MarkerManager(this.map);
+    // this.MarkerManager = new MarkerManager(this.map);
 
     // this.registerListeners();
-    this.MarkerManager.updateMarkers([this.props.listing]);
+    // this.MarkerManager.updateMarkers([this.props.listing]);
   }
   
   render() {
