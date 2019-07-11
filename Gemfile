@@ -35,7 +35,7 @@ gem 'jbuilder', '~> 2.5'
   gem 'pry-rails'
   gem 'bcrypt'
   gem 'jquery-rails'
-  gem 'aws-sdk-s3'
+  gem 'aws-sdk-s3', require: false
   gem 'ez_download', git: 'https://github.com/OscarAlvarez8830/EZDownload.git'
   gem 'faker'
 
