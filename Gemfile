@@ -37,6 +37,7 @@ gem 'jbuilder', '~> 2.5'
   gem 'jquery-rails'
   gem 'aws-sdk-s3'
   gem 'ez_download', git: 'https://github.com/OscarAlvarez8830/EZDownload.git'
+  gem 'faker'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
@@ -47,7 +48,6 @@ group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'annotate'
-  gem 'faker'
 end
 
 group :development do
