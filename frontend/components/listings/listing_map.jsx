@@ -6,6 +6,7 @@ class ListingMap extends React.Component {
   constructor(props) {
     super(props);
     this.renderMap = this.renderMap.bind(this);
+    this.handleMarkerClick = this.handleMarkerClick.bind(this);
   }
 
   componentDidMount() {
@@ -37,14 +38,13 @@ class ListingMap extends React.Component {
 
     // const map = this.refs.map;
     this.map = new google.maps.Map(this.mapNode, mapOptions);
-    this.MarkerManager = new MarkerManager(this.map);
+    this.MarkerManager = new MarkerManager(this.map, this.handleMarkerClick);
 
     this.registerListeners();
     this.MarkerManager.updateMarkers(this.props.listings);
   }
 
   registerListeners() {
-    
     google.maps.event.addListener(this.map, 'idle', () => {
       const { north, south, east, west } = this.map.getBounds().toJSON();
       
@@ -57,6 +57,9 @@ class ListingMap extends React.Component {
     });
   }
   
+  handleMarkerClick(listing) {
+    this.props.history.push(`/listings/${listing.id}`);
+  }
   
 
   render() {

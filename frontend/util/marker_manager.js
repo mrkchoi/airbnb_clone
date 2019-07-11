@@ -1,22 +1,23 @@
 
 class MarkerManager {
-  constructor(map) {
+  constructor(map, handleMarkerClick) {
     this.map = map;
     this.markers = {};
+
+    this.handleMarkerClick = handleMarkerClick;
   }
 
-  updateMarkers(listings) {    
+  updateMarkers(listings) {
     let listingObj = {};
-    listings.forEach(listing => listingObj[listing.id] = listing);
+    listings.forEach(listing => (listingObj[listing.id] = listing));
 
-    listings  
+    listings
       .filter(listing => !this.markers[listing.id])
       .forEach(newListing => this.createMarkerFromListing(newListing));
 
     Object.keys(this.markers)
       .filter(listingId => !listingObj[listingId])
       .forEach(listingId => this.removeMarker(this.markers[listingId]));
-      
   }
 
   createMarkerFromListing(listing) {
@@ -51,6 +52,10 @@ class MarkerManager {
       });
 
       this.markers[listing.id] = marker;
+      let markerIcon = this.markers[listing.id];
+      markerIcon.addListener("click", () =>
+        this.handleMarkerClick(listing)
+      );
     }
   }
 
@@ -59,7 +64,6 @@ class MarkerManager {
       this.markers[marker.id].setMap(null);
       delete this.markers[marker.id];
     }
-  
   }
 }
 

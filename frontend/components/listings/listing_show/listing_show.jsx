@@ -40,15 +40,12 @@ class ListingShow extends React.Component {
   
 
   componentDidUpdate(prevProps, prevState) {
-    // if (prevState !== state) {
-    //   let listingId = this.props.match.params.listingId;
-    //   this.props
-    //     .fetchListing(listingId)
-    //     .then(action =>
-    //       this.props.fetchHost(action.listing.host_id)
-    //     );
-    //   this.props.fetchReviews(listingId);
-    // }
+    if (prevProps.match.params.listingId !== this.props.match.params.listingId) {
+          let listingId = this.props.match.params.listingId;
+    this.props.fetchListing(listingId)
+      .then(action => this.props.fetchHost(action.listing.host_id));
+    this.props.fetchReviews(listingId);
+    }
   }
   
   
