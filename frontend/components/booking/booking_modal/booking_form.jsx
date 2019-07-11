@@ -3,6 +3,7 @@ import RenderStars from '../../stars/render_stars';
 import ThemedStyleSheet from 'react-with-styles/lib/ThemedStyleSheet';
 import aphroditeInterface from 'react-with-styles-interface-aphrodite';
 import DefaultTheme from 'react-dates/lib/theme/DefaultTheme';
+import { withRouter, Redirect } from 'react-router-dom';
 
 ThemedStyleSheet.registerInterface(aphroditeInterface);
 ThemedStyleSheet.registerTheme(DefaultTheme);
@@ -34,21 +35,40 @@ class BookingForm extends React.Component {
       focusedInput: null,
       numGuests: 1,
       loading: false,
-      redirect: false 
+      // redirect: false 
     }
 
+    this.handleSubmit = this.handleSubmit.bind(this);
     this.handleClick = this.handleClick.bind(this);
+    this.handleSelectChange = this.handleSelectChange.bind(this);
+
+    // setTimeout(() => {
+    //   this.setState({ loading: false })
+    // }, 1000);
   }
 
-  handleSumbit(e) {
+  handleSubmit(e) {
     e.preventDefault();
 
     // clearBooking Errors
     // If not logged in, scroll to top & oepen login modal
     // Pass bookingParams from state in correct shape to slice of redux state for booking action
+    let bookingParams = {
+      start_date: new Date(this.state.startDate),
+      end_date: new Date(this.state.endDate),
+      num_guests: parseInt(this.state.numGuests),
+      listing_id: this.props.listing.id,
+      user_id: this.props.currentUser.id
+    };
+
+    this.props.receiveCheckoutInfo(bookingParams);
+    this.props.closeModal();
+    this.props.history.push(`/checkout/${this.props.listing.id}`);
+    // debugger
     // Redirect to booking confirmation page and pull booking info from redux state
     // On submit, send bookingParams to createBooking action to push to DB
     // Then, redirect user to trips/profile page
+    // debugger
     
   }
 
@@ -57,11 +77,22 @@ class BookingForm extends React.Component {
     this.props.closeModal();
   }
 
+  handleSelectChange(e) {
+    this.setState({
+      numGuests: e.currentTarget.value
+    })
+  }
+
   render() {
     let { listing } = this.props;
 
-    if (!this.props.listing) {
-      return null;
+    if (!this.props.listing || this.state.loading) {
+      // return null;
+      return (
+        <div className="bookingmodal__container--loading">
+          <PulseLoader />
+        </div>
+      );
     }
 
     // Calculate max number of guests for select/option dropdown
@@ -72,7 +103,7 @@ class BookingForm extends React.Component {
     }
     
     let numGuestsInput = (
-      <select className="bookingmodal__form-guest-input">
+      <select className="bookingmodal__form-guest-input" value={this.state.numGuests} onChange={this.handleSelectChange}>
         {numGuestsArr.map((num, idx) => <option value={num} key={idx}>{num}</option> )}
       </select>
     );
@@ -139,10 +170,12 @@ class BookingForm extends React.Component {
             </div>
             
             <div className="bookingmodal__form-cta-container">
-              <input type="submit" className="bookingmodal__form-btn" value="Request to Book" />
+              <input type="submit" className="bookingmodal__form-btn" value="Request to Book" onClick={this.handleSubmit}/>
               <p className="bookingmodal__form-cta-text">You won't be charged yet</p>
             </div>
           </form>
+
+          {this.state.redirect ? this.props.history.push("/bookings") : null}
         </div>
 
 
@@ -152,4 +185,4 @@ class BookingForm extends React.Component {
   }
 }
 
-export default BookingForm;
+export default withRouter(BookingForm);

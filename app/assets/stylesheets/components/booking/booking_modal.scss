@@ -99,6 +99,11 @@
   transition: all 75ms ease-in;  
   margin-bottom: .6rem;  
 }
+
+input.bookingmodal__form-btn:active {
+  background-color: #773152;
+}
+
 .bookingmodal__form-cta-text {
   text-align: center;
   font-size: 12px;
@@ -144,3 +149,8 @@ button.DayPickerKeyboardShortcuts_buttonReset_4i742g-o_O-DayPickerKeyboardShortc
 // .CalendarDay__hovered_span {
 //   background: brown;
 // }
+
+// Loading
+.bookingmodal__container--loading {
+  background-color: transparent;
+}

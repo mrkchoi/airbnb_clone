@@ -84,7 +84,8 @@ button.header__navbar-profile:focus {
   border-bottom: 1px solid transparent;  
 }
 
-.header__listing-show .header__logo-img {
+.header__listing-show .header__logo-img, 
+.header__checkout .header__logo-img {
   background-image: image-url(("logo/01_airbnb-logo-sm-purple.png"));
 }
 

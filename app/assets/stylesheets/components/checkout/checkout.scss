@@ -1,0 +1,370 @@
+header.header__container.header__checkout {
+  position: initial;  
+}
+
+.checkout__main-outer-container {
+  margin-bottom: 2rem;
+}
+
+.checkout__main-inner-container {}
+.checkout__main-inner-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  padding-top: 2rem;
+  justify-content: space-between;  
+}
+.checkout__main-wrapper {
+  width: 75%;
+  padding-right: 5%;
+}
+.checkout__header-container {
+  margin-bottom: 2rem;
+}
+.checkout__header {
+  font-size: 32px;
+  color: #484848; 
+}
+.checkout__rarefind-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(0,0,0,.08);
+  padding: 1.2rem 2rem;
+}
+.checkout__rarefind-icon-wrapper {
+  margin-right: 1rem;
+}
+.checkout__rarefind-icon {
+  background-image: image-url("icons/checkout/01-diamond-icon.gif");
+  height: 35px;
+  width: 35px;
+  background-size: cover;
+  background-position: center;
+}
+
+.checkout__rarefind-content {
+
+}
+
+.checkout__rarefind-text {}
+.checkout__rarefind-text span {
+  font-weight: 600;
+  margin-right: .4rem;
+}
+
+  
+
+
+
+.checkout__nights-wrapper {
+  margin-top: 5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0,0,0,.08);
+}
+.checkout__nights-header {
+  font-size: 18px;
+  color: #484848;  
+}
+.checkout__nights-checkinout-wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 75%;
+  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;  
+}
+.checkout__nights-check-in-outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.checkout__nights-date-outer {
+  background-color: rgb(242, 242, 242) !important;
+  padding: 1rem;  
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.2rem;  
+}
+.checkout__nights-date-month {
+  margin-bottom: 0;
+}
+.checkout__nights-date-day {
+  font-weight: 600;  
+}
+.checkout__nights-text-wrapper {}
+.checkout__nights-day-check-in {
+  margin-bottom: 0;  
+  font-weight: 300; 
+}
+.checkout__nights-time-check-in {
+  margin-bottom: 0;  
+  font-weight: 300;  
+  font-size: 16px;
+  margin-top: .2rem;  
+}
+.checkout__nights-check-out-outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+.checkout__nights-self-check-in-wrapper {
+  display: flex;
+  align-items: center;  
+}
+
+.checkout__nights-self-check-in-icon-wrapper {
+  margin: 1.1rem;
+  margin-right: 2.2rem;  
+}
+
+.checkout__nights-self-check-in-icon {
+  background-image: image-url("icons/checkout/02-self-check-in-icon.png");
+  height: 25px;
+  width: 25px;
+  background-size: cover;
+  background-position: center;  
+}
+
+.checkout__nights-self-check-in-text {
+  font-weight: 300;
+  font-size: 16px;  
+}
+
+.checkout__mind-wrapper {
+  padding-top: 1rem;
+  margin-bottom: 4rem;
+}
+
+.checkout__mind-header {
+  font-size: 18px;
+  color: #484848;  
+}
+
+.checkout__mind-detail-wrapper {}
+
+.checkout__mind-detail-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.checkout__mind-detail-icon-wrapper {
+  padding: 0.8rem;
+  border: 1px solid rgba(0,0,0,.08);
+  margin-right: 1.2rem;  
+}
+
+.checkout__mind-detail-icon#children {
+  background-image: image-url("icons/checkout/03-children-infants-icon.png");
+  height: 30px;
+  width: 30px;
+  background-size: cover;
+  background-position: center;    
+}
+.checkout__mind-detail-icon#pets {
+  background-image: image-url("icons/checkout/04-no-pets-icon.png");
+  height: 30px;
+  width: 30px;
+  background-size: cover;
+  background-position: center;    
+}
+.checkout__mind-detail-icon#parties {
+  background-image: image-url("icons/checkout/05-no-parties-icon.png");
+  height: 30px;
+  width: 30px;
+  background-size: cover;
+  background-position: center;    
+}
+.checkout__mind-detail-icon#smoking {
+  background-image: image-url("icons/checkout/06-no-smoking-icon.png");
+  height: 30px;
+  width: 30px;
+  background-size: cover;
+  background-position: center;    
+}
+
+.checkout__mind-detail-text {
+  font-size: 16px;
+  font-weight: 300;  
+}
+
+.checkout__btn-wrapper {}
+
+.checkout__btn {
+  background-color: rgb(145, 70, 105);
+  padding: 1rem 1.8rem;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-right: 0;
+  outline: none;
+  cursor: pointer;
+  margin-left: 0;
+  transition: all 75ms ease-in;  
+}
+
+.checkout__btn:hover {
+  color: #fff;
+}
+
+
+.checkout__btn:active {
+  background-color: rgb(119, 49, 82);
+  color: #fff;
+
+}
+
+
+
+
+
+.checkout__sidebar-wrapper {
+  border: 1px solid rgba(0,0,0,.08);
+  padding: 3.2rem 1.6rem;  
+}
+
+.checkout__sidebar-recap-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(0,0,0,.08);  
+}
+
+.checkout__sidebar-recap-desc-wrapper {
+  margin-right: 1rem;  
+}
+
+.checkout__sidebar-recap-header {
+  line-height: 1.6rem;
+  margin-bottom: 0.6rem;
+  font-size: 16px;
+}
+
+.checkout__sidebar-recap-text {}
+.checkout__sidebar-recap-review-wrapper {
+  display: flex;  
+}
+
+.checkout__sidebar-recap-review-wrapper .starrating__container {
+  color: #914669;
+  font-size: 0.8rem;
+  margin-right: .2rem;  
+}
+.checkout__sidebar-recap-review-nums {
+  font-size: 12px;  
+}
+.checkout__sidebar-recap-photo-wrapper {}
+.checkout__sidebar-recap-photo {
+  width: 100px;
+  height: 70px;
+  background-size: cover;
+  background-position: center;
+}
+.checkout__sidebar-recap-guest-dates-wrapper {
+  padding-top: 2rem;  
+}
+.checkout__sidebar-recap-guest-outer {
+  display: flex;  
+  align-items: center;  
+  margin-bottom: 1rem;  
+}
+
+.checkout__sidebar-recap-guest-icon-wrapper {
+  margin-right: 0.6rem;
+}
+.checkout__sidebar-recap-guest-icon {
+  background-image: image-url("icons/checkout/08-guest-icon.png");
+  height: 22px;
+  width: 22px;
+  background-size: cover;
+  background-position: center;    
+}
+.checkout__sidebar-recap-guest-text {
+  font-size: 16px;  
+  font-weight: 300;  
+}
+.checkout__sidebar-recap-dates-outer {
+  display: flex;  
+  align-items: center;  
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(0,0,0,.08);
+}
+.checkout__sidebar-recap-dates-icon-wrapper {
+  margin-right: 0.6rem;
+}
+.checkout__sidebar-recap-dates-icon {
+  background-image: image-url("icons/checkout/09-calendar-icon.png");
+  height: 22px;
+  width: 22px;
+  background-size: cover;
+  background-position: center;    
+}
+.checkout__sidebar-recap-dates-text {
+  font-size: 16px;  
+  font-weight: 300;  
+}
+
+.checkout__sidebar-fees-wrapper {
+  margin-top: 2rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid rgba(0,0,0,.08);
+}
+
+.checkout__sidebar-fees-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;  
+}
+.checkout__sidebar-fees-content {
+  font-weight: 300;  
+}
+.checkout__sidebar-fees-content--bold {
+  font-weight: 500;  
+}
+.checkout__sidebar-fees-price {
+  font-weight: 300;
+}
+.checkout__sidebar-fees-price--bold {
+  font-weight: 500;  
+}
+.checkout__sidebar-fees-total-wrapper {
+  padding: 2rem 0 1rem;
+  border-bottom: 1px solid rgba(0,0,0,.08);  
+}
+
+.checkout__sidebar-cancellation-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+  padding-top: 2.5rem;  
+}
+.checkout__sidebar-cancellation-content {
+  color: rgba(0,0,0,0.6);
+  margin-right: 2rem;  
+}
+.checkout__sidebar-cancellation-header {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+.checkout__sidebar-cancellation-text {
+  font-size: 14px;
+  font-weight: 300;  
+}
+.checkout__sidebar-cancellation-icon-wrapper {}
+.checkout__sidebar-cancellation-icon {
+  background-image: image-url("icons/checkout/07-cancellation-badge-icon.png");
+  height: 50px;
+  width: 50px;
+  background-size: cover;
+  background-position: center;      
+}
+
+.checkout__footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(0,0,0,.08);
+}

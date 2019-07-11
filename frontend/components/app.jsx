@@ -5,6 +5,7 @@ import { AuthRoute, ProtectedRoute } from "../util/route_util";
 import LandingMain from './landing/landing_main';
 import SearchContainer from './search/search_container';
 import ListingShowContainer from './listings/listing_show/listing_show_container';
+import CheckoutContainer from './checkout/checkout_container';
 
 
 const App = () => {
@@ -19,6 +20,9 @@ const App = () => {
         <ProtectedRoute 
           exact path="/listings" 
           component={SearchContainer} />
+        <ProtectedRoute 
+          path="/checkout/:listingId" 
+          component={CheckoutContainer} />
       </Switch>
     </main>
   );

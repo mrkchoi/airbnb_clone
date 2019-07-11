@@ -9,7 +9,7 @@ const Header = (props) => {
   let { type } = props;
   let searchBar;
 
-  if (props.currentUser) {
+  if (props.currentUser && type !== 'header__checkout') {
     searchBar = <SearchBarContainer />;
   } else {
     searchBar = null;
