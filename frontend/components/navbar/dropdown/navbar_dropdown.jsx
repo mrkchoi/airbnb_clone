@@ -16,6 +16,7 @@ class NavbarDropdown extends React.Component {
   handleTripClick(e) {
     e.preventDefault();
     this.props.history.push(`/trips/${this.props.currentUserId}`);
+    this.props.closeModal();
   }
 
   render() {

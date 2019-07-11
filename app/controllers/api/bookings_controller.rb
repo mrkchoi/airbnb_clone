@@ -22,7 +22,7 @@ class Api::BookingsController < ApplicationController
   end
 
   def destroy
-    @booking = Booking.find_by(params[:id])
+    @booking = Booking.find_by(id: params[:id])
     @booking.destroy!
     render json: ["Booking successfully removed."]
   end

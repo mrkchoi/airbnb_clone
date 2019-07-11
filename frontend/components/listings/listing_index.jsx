@@ -20,7 +20,6 @@ class ListingIndex extends React.Component {
   render() {
     let { listings, updateSearchCoords } = this.props;
     let listingHeader;
-    // debugger
 
     // Listing Header
     if (listings.length > 0) {
