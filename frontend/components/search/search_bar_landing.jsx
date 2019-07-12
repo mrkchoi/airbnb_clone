@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
-class SearchBar extends React.Component {
+class SearchBarLanding extends React.Component {
   
   constructor(props) {
     super(props);
@@ -15,7 +15,7 @@ class SearchBar extends React.Component {
   }
 
   componentDidMount() {
-    const searchInput = document.querySelector(".header__search-input");
+    const searchInput = document.querySelector(".landing__search-input");
     const autocomplete = new google.maps.places.Autocomplete(searchInput);
     google.maps.event.addDomListener(window, "load", autocomplete);
     let address;
@@ -30,6 +30,8 @@ class SearchBar extends React.Component {
         this.handleSubmit();
       }
     });
+
+    document.querySelector('body').classList.add('landing__page');
   }
 
   componentWillUnmount() {
@@ -46,44 +48,50 @@ class SearchBar extends React.Component {
     if (e) {
       e.preventDefault();
     }
-    const geocoder = new google.maps.Geocoder();
-    geocoder.geocode({ address: this.state.query }, (res, status) => {
-      if (status === google.maps.GeocoderStatus.OK) {
-        const lat = res[0].geometry.location.lat();
-        const lng = res[0].geometry.location.lng();
-        this.props.history.push(`/listings?lat=${lat}&lng=${lng}`);
-        
-        this.props.updateSearchCoords(lat, lng);
-      } else {
-        this.props.history.push(`/listings?lat=37.7749&lng=122.4194`);
-      }
-    });
+
+    if (this.props.currentUser) {
+      const geocoder = new google.maps.Geocoder();
+      geocoder.geocode({ address: this.state.query }, (res, status) => {
+        if (status === google.maps.GeocoderStatus.OK) {
+          const lat = res[0].geometry.location.lat();
+          const lng = res[0].geometry.location.lng();
+          this.props.history.push(`/listings?lat=${lat}&lng=${lng}`);
+          
+          this.props.updateSearchCoords(lat, lng);
+        } else {
+          this.props.history.push(`/listings?lat=37.7749&lng=122.4194`);
+        }
+      });
+    } else {
+      this.props.openModal('login');
+    }
   }
 
   render() {
     return (
-      <div className="header__search-container-inner">
-        <div className="header__search-icon-container" />
-        <form className="header__search-form" onSubmit={this.handleSubmit}>
-          <input
-            type="text"
-            value={this.state.query}
-            onChange={this.handleInput}
-            className="header__search-input"
-            placeholder={`Try "San Francisco"`}
-          />
-          <input
-            type="submit"
-            value="Search"
-            className="header__search-btn-submit"
-          />
+      <div className=" landing__search-container">
+        <form className="landing__search-form" onSubmit={this.handleSubmit}>
+          <p className="landing__search-form-label">
+            Where
+          </p>
+          <div className="landing__search-form-inner">
+            <input
+              type="text"
+              value={this.state.query}
+              onChange={this.handleInput}
+              className="landing__search-input"
+              placeholder={`Try "San Francisco"`}
+            />
+            <input
+              type="submit"
+              value="Search"
+              className="landing__search-btn-submit"
+            />
+          </div>
         </form>
-        <div className="header__search-close-container">
-          <i className="fas fa-times" />
-        </div>
       </div>
     );
   }
 }
 
-export default withRouter(SearchBar);
+export default withRouter(SearchBarLanding);

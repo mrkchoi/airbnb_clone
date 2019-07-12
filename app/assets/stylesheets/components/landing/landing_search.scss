@@ -1,0 +1,112 @@
+.header__container-outer {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0);
+}
+
+.header__container-outer:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0);
+}
+
+.header__search-wrapper {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  background-color: #fff;
+  border-radius: 4px !important;
+  padding: 32px !important;
+  padding-bottom: 24px !important;
+  width: 441px !important;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12) !important;  
+}
+
+
+.header__search-header {
+  font-size: 2.3rem;
+  line-height: 3rem;  
+}
+
+.header__search-form-wrapper {}
+
+.landing__search-form-label {
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: rgba(0,0,0,0.7) !important;
+}
+
+
+.landing__search-container {
+  
+}
+
+.landing__search-form-inner {
+  display: flex;
+  flex-direction: column;
+}
+.landing__search-form {}
+
+.landing__search-input:focus {
+  border: 2px solid rgb(0, 132, 137);
+  outline: none;
+}
+
+.landing__search-input {
+  width: 100% !important;
+  height: 48px !important;
+  display: table !important;
+  background-color: #ffffff !important;
+  border: 1px solid #EBEBEB !important;
+  border-radius: 4px !important;
+  font-size: 17px;
+  padding: 1rem;  
+  margin-bottom: 1.5rem;
+}
+
+.landing__search-btn-submit:active {
+  background-color: rgb(223, 60, 71);
+}
+
+.landing__search-btn-submit:active, 
+.landing__search-btn-submit:focus {
+  outline: none;
+}
+
+.landing__search-btn-submit {
+  font-size: 16px;
+  border-radius: 4px;
+  line-height: 24px;
+  padding: 0.8rem 1.4rem;
+  background-color: #FF5A5F;
+  color: #fff;
+  max-width: 100px;
+  font-weight: 600;
+  align-self: flex-end;
+  transition: all 100ms ease-in;
+  cursor: pointer;
+}
+
+
+// Dropdown styles
+.landing__page .pac-container {
+  width: 375px !important;
+  left: 8.5rem !important;
+}
+
+.landing__page .pac-icon {
+  color: #FF5A5F;
+}
+
+.landing__page .pac-item {
+  padding: 1rem;
+  width: 100%;
+  font-family: inherit;
+}
+
+.landing__page .pac-item:hover {
+  cursor: pointer;
+}
+
+.landing__page .pac-item-selected {}
+
+.landing__page .pac-item-query {}
+
+.landing__page .pac-item {}
