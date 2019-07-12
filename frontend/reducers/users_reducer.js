@@ -8,7 +8,6 @@ const usersReducer = (oldState = defaultState, action) => {
   Object.freeze(oldState);
   let newState = merge({}, oldState);
 
-  // debugger
   switch(action.type) {
     case RECEIVE_CURRENT_USER:
       newState[action.user.id] = action.user;

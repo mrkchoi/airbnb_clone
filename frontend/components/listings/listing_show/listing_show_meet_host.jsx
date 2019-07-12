@@ -3,7 +3,6 @@ import React from "react";
 class ListingShowMeetHost extends React.Component {
   render() {
     let { host } = this.props;
-    // debugger
 
     if (!this.props.host || !this.props.listing) {
       return null;

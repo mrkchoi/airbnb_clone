@@ -6,7 +6,6 @@ import Header from '../navbar/header';
 import ListingShowFooter from '../listings/listing_show/listing_show_footer';
 import PulseLoader from '../loaders/pulse_loader';
 import ListingIndexItem from '../listings/ListingIndexItem';
-import { RSA_PKCS1_PSS_PADDING } from 'constants';
 
 class Trips extends React.Component {
   constructor(props) {
@@ -32,12 +31,6 @@ class Trips extends React.Component {
     let listingId = e.target.getAttribute('data-listing-id');
     this.props.deleteBooking(listingId)
       .then(() => this.props.fetchAllBookings());
-
-    // setTimeout(() => {
-    //   this.setState({ loading: true });
-    // }, 1500);
-
-    // this.setState({ loading: false });
   }
 
   render() {
@@ -54,7 +47,6 @@ class Trips extends React.Component {
     }
 
     // Set conditional trip header
-    // debugger
     if (bookings.length > 0) {
       tripsHeader = (
         <div className="trips__header-container">
@@ -65,7 +57,6 @@ class Trips extends React.Component {
         </div>
       );
 
-      // debugger
 
       trips = bookings.map((booking, idx) => (
         <div className="trips__item" key={idx}>

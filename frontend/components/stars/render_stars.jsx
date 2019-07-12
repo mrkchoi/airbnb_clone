@@ -2,7 +2,7 @@ import React from 'react';
 
 const RenderStars = (rating) => {
   rating = parseFloat(rating);
-  // debugger
+
   const fullStar = <i className="fas fa-star" />;
   const emptyStar = <i className="far fa-star" />;
   const halfStar = <i className="fas fa-star-half-alt" />;

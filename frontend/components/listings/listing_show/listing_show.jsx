@@ -92,8 +92,6 @@ class ListingShow extends React.Component {
     let { listing, currentUser, users, reviews } = this.props;
     let host = users[listing.host_id];
 
-    // debugger
-
     return (
       <div className="listingshow__container-main">
         <Modal />
