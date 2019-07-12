@@ -31,6 +31,15 @@ class SearchBarLanding extends React.Component {
       }
     });
     document.querySelector('body').classList.add('landing__page');
+
+    // Move autocomplete as child of search input
+    $(document).ready(function() {
+      setTimeout(() => {
+        let searchBox = document.querySelector(".landing__search-form-inner");
+        let dropdown = document.querySelector('.pac-container');
+        searchBox.appendChild(dropdown);
+      }, 1000);
+    });
   }
   
   componentWillUnmount() {
