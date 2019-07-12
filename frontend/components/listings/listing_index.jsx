@@ -15,6 +15,10 @@ class ListingIndex extends React.Component {
 
   componentDidMount() {
     // this.props.fetchListings();
+    setTimeout(() => {
+      document.body.classList.remove("landing__page");
+    }, 500); 
+
   }
 
   render() {

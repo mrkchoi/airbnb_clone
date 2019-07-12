@@ -30,12 +30,11 @@ class SearchBarLanding extends React.Component {
         this.handleSubmit();
       }
     });
-
     document.querySelector('body').classList.add('landing__page');
   }
-
+  
   componentWillUnmount() {
-
+    
   }
 
   handleInput(e) {
@@ -48,6 +47,7 @@ class SearchBarLanding extends React.Component {
     if (e) {
       e.preventDefault();
     }
+    document.body.className.replace("landing__page", "");
     
     if (this.props.currentUser) {
       const geocoder = new google.maps.Geocoder();
