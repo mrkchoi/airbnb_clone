@@ -1,8 +1,16 @@
-# Welcome to Aerbnb
-Aerbnb is a single-page, full stack web application inspired by Airbnb. It utilizes Ruby on Rails with a PostgreSQL database on the back-end, and React.js and Redux on the front-end. Users can view, book, and search for listings by location.
+# Aerbnb
+## [View the live site](https://aerbnb.herokuapp.com/#/)
+Aerbnb is a single-page, full stack web application inspired by Airbnb. It utilizes Ruby on Rails with a PostgreSQL database on the back-end, and React.js and Redux on the front-end. 
+* Users can view, book, and search for listings by location.
+
+### Screenshots
+
+<img src="https://aerbnb-seeds.s3-us-west-1.amazonaws.com/photos/preview/1-aerbnb-screen.png" align="center" height="auto" width="75%" margin="0 auto" alt="Aerbnb screenshot Kenny Choi">
+<img src="https://aerbnb-seeds.s3-us-west-1.amazonaws.com/photos/preview/2-aerbnb-screen.png" align="center" height="auto" width="75%" margin="0 auto" alt="Aerbnb screenshot Kenny Choi">
+<img src="https://aerbnb-seeds.s3-us-west-1.amazonaws.com/photos/preview/3-aerbnb-screen.png" align="center" height="auto" width="75%" margin="0 auto" alt="Aerbnb screenshot Kenny Choi">
 
 ## Key Features
-### Aerbnb Design Documents
+### [Aerbnb Design Documents](https://github.com/mrkchoi/airbnb_clone/wiki)
 
 ### User Authentication
 * Users can sign up or log in to use the application.
