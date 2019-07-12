@@ -10,7 +10,7 @@ class ListingIndex extends React.Component {
       loading: true
     };
 
-    setTimeout(() => this.setState({ loading: false }), 3000);
+    setTimeout(() => this.setState({ loading: false }), 4000);
   }
 
   componentDidMount() {
