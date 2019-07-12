@@ -34,7 +34,7 @@ ActiveRecord::Base.transaction do
   # Guest user
   User.create(
     firstname: 'Guest',
-    username: 'guestuser',
+    username: 'Guest user',
     email: 'guest@guest.com',
     bio: 'Guest User is a SF-based software engineer who loves to travel. Currently at 26 countries and counting! Hobbies include meeting new people and exploring different cultures through food. Looking forward to crossing paths in the coming future! ...',
     joined_date: 'Tue, 19 Feb 2019',

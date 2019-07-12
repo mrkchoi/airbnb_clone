@@ -41,12 +41,6 @@ class SessionForm extends React.Component {
       password: ''
     });
 
-    // // create mock user credentials
-    // let guestCreds = {
-    //   username: 'guestuser',
-    //   password: 'password'
-    // }
-
     let pw = 'password';
     let un = 'guestuser';
 

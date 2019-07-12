@@ -48,7 +48,7 @@ class SearchBarLanding extends React.Component {
     if (e) {
       e.preventDefault();
     }
-
+    
     if (this.props.currentUser) {
       const geocoder = new google.maps.Geocoder();
       geocoder.geocode({ address: this.state.query }, (res, status) => {
@@ -64,6 +64,15 @@ class SearchBarLanding extends React.Component {
       });
     } else {
       this.props.openModal('login');
+      const geocoder = new google.maps.Geocoder();
+      geocoder.geocode({ address: this.state.query }, (res, status) => {
+        if (status === google.maps.GeocoderStatus.OK) {
+          const lat = res[0].geometry.location.lat();
+          const lng = res[0].geometry.location.lng();
+          this.props.history.push(`/listings?lat=${lat}&lng=${lng}`);
+          this.props.updateSearchCoords(lat, lng);
+        }
+      });
     }
   }
 
