@@ -74,7 +74,7 @@ class Listing < ApplicationRecord
   // ..
 end
 ```
-The Google Maps API is integrated into the frontend React components
+The Google Maps API is integrated into the appropriate React frontend components
 
 ```ruby
 class ListingMap extends React.Component {
