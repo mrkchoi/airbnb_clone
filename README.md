@@ -5,9 +5,9 @@ Aerbnb is a single-page, full stack web application inspired by Airbnb. It utili
 
 ### Screenshots
 
-<img src="https://aerbnb-seeds.s3-us-west-1.amazonaws.com/photos/preview/1-aerbnb-screen.png" align="center" height="auto" width="60%" alt="Aerbnb screenshot Kenny Choi">
-<img src="https://aerbnb-seeds.s3-us-west-1.amazonaws.com/photos/preview/2-aerbnb-screen.png" align="center" height="auto" width="60%" margin="0 auto" alt="Aerbnb screenshot Kenny Choi">
-<img src="https://aerbnb-seeds.s3-us-west-1.amazonaws.com/photos/preview/3-aerbnb-screen.png" align="center" height="auto" width="60%" margin="0 auto" alt="Aerbnb screenshot Kenny Choi">
+![AirBnB clone screenshot Kenneth Choi](https://aerbnb-seeds.s3-us-west-1.amazonaws.com/photos/preview/1-aerbnb-screen.png)
+![AirBnB clone screenshot Kenneth Choi](https://aerbnb-seeds.s3-us-west-1.amazonaws.com/photos/preview/2-aerbnb-screen.png)
+![AirBnB clone screenshot Kenneth Choi](https://aerbnb-seeds.s3-us-west-1.amazonaws.com/photos/preview/3-aerbnb-screen.png)
 
 ### Key Features
 #### [Aerbnb Design Documents](https://github.com/mrkchoi/airbnb_clone/wiki)
