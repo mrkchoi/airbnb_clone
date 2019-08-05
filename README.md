@@ -75,7 +75,7 @@ class Listing < ApplicationRecord
 end
 ```
 
-```
+```ruby
 class ListingMap extends React.Component {
   constructor(props) {
     super(props);
@@ -113,7 +113,8 @@ class ListingMap extends React.Component {
     
     // ..
   }
-ruby```
+```
+
 #### Bookings
 * A logged in user is able to view his or her bookings.
 * A logged in user is able to make valid bookings on listings and delete any booking he or she made.
