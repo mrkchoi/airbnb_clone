@@ -10,10 +10,10 @@ Aerbnb is a single-page, full stack web application inspired by Airbnb. It utili
 #### [Aerbnb Design Documents](https://github.com/mrkchoi/airbnb_clone/wiki)
 
 #### User Authentication
-* Users can sign up or log in to use the application.
-* Users can also log in through a demo account.
+* Users can sign up or log in to use the application
+* Users can also log in through a demo account
 
-User credentials are securely hashed, salted, and stored as a password digest.
+User credentials are securely hashed, salted, and stored as a password digest
 
 ```ruby
 class User < ApplicationRecord
@@ -53,10 +53,10 @@ end
 ```
 
 #### Listings
-* Listings are displayed on the homepage.
-* Users are able to search for listings via Google Maps Places API.
+* Listings are displayed on the homepage
+* Users are able to search for listings via Google Maps Places API
 
-As a user moves the map around, the new bounds (coordinates) will get updated in realtime and send the correct listings from the backend (PostgreSQL database).
+As a user moves the map around, the new bounds (coordinates) will get updated in realtime and send the correct listings from the backend (PostgreSQL database)
 
 ```ruby
 class Listing < ApplicationRecord
@@ -74,6 +74,7 @@ class Listing < ApplicationRecord
   // ..
 end
 ```
+The Google Maps API is integrated into the frontend React components
 
 ```ruby
 class ListingMap extends React.Component {
@@ -116,8 +117,8 @@ class ListingMap extends React.Component {
 ```
 
 #### Bookings
-* A logged in user is able to view his or her bookings.
-* A logged in user is able to make valid bookings on listings and delete any booking he or she made.
+* A logged in user is able to view his or her bookings
+* A logged in user is able to make valid bookings on listings and delete any booking he or she made
 
 #### Technology Stack
 Aerbnb is a single-page web application with one backend route responsible for rendering HTML. User interactions in the front-end side trigger AJAX requests to the back-end, which is responsible for rendering database information in JSON format.
@@ -131,7 +132,7 @@ Redux manages the front-end state of Aerbnb. When database information is retrie
 
 ### Back-end
 #### Ruby on Rails
-Ruby on Rails is the back-end framework used to query the database. Read more
+Ruby on Rails is the back-end framework used to query the database.
 
 #### Database
 Aerbnb uses a PostgreSQL database to store its relational data.
