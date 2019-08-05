@@ -124,11 +124,10 @@ Aerbnb is a single-page web application with one backend route responsible for r
 
 ### Front-end
 #### React
-The response information is taken by the React JS library to update the page.
+The Rails backend API is connected to a React frontend to efficiently render to the virtual DOM.
 
-* One of the ways React is a useful tool for front-end development is creating a virtual DOM to make DOM manipulation efficient.
 #### Redux
-Redux manages the front-end state of Heirbnb. When database information is retrieved, Redux state is updated first and re-renders the appropriate React components.
+Redux manages the front-end state of Aerbnb. When database information is retrieved, Redux state is updated first and re-renders the appropriate React components.
 
 ### Back-end
 #### Ruby on Rails
